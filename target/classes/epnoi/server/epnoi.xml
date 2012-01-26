@@ -6,5 +6,5 @@
   <entry key="model.path">/wf4ever/lastImportedModel.xml</entry>
   <entry key="server.hostname">localhost</entry>
   <entry key="server.path"></entry>
-  <entry key="server.port">9998</entry>
+  <entry key="server.port">8015</entry>
 </properties>

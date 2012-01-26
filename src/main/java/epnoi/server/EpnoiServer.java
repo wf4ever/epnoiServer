@@ -44,11 +44,12 @@ public class EpnoiServer {
 				serverPath, initParams);
 		System.out
 				.println(String
-						.format("Jersey app started with WADL available at %sapplication.wadl\n” +“Try out %shelloworld\nHit enter to stop it...",
+						.format("Jersey app started with WADL available at "+serverPath+"application.wadl\n",
 								baseUri, baseUri));
 		System.in.read();
 		threadSelector.stopEndpoint();
 		System.exit(0);
+		
 	}
 	
 	public static Properties _readProperties() {
