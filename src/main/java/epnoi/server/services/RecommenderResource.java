@@ -24,6 +24,8 @@ import epnoi.model.File;
 import epnoi.model.Pack;
 import epnoi.model.Recommendation;
 import epnoi.model.Workflow;
+import epnoi.model.parameterization.ParametersModel;
+import epnoi.model.parameterization.ParametersModelWrapper;
 import epnoi.server.EpnoiServer;
 
 
@@ -33,7 +35,9 @@ public class RecommenderResource {
 	private String EPNOI_CORE_ATTRIBUTE = "EPNOI_CORE";
 	private String XML_FORMAT = "xml";
 	private String TEXTUAL_FORMAT = "txt";
-	private Properties initializationProperties = null;
+	private ParametersModel parametersModel;
+
+	
 
 	@Context
 	ServletContext context;
@@ -47,8 +51,8 @@ public class RecommenderResource {
 			System.out.println("Loading the model!");
 			long time = System.currentTimeMillis();
 			this.epnoiCore = new EpnoiCore();
-			Properties initializationProperties = this._readProperties();
-			this.epnoiCore.init(initializationProperties);
+			parametersModel = this._readParameters();
+			this.epnoiCore.init(parametersModel);
 			this.context.setAttribute(EPNOI_CORE_ATTRIBUTE, epnoiCore);
 			long afterTime = System.currentTimeMillis();
 			System.out.println("It took " + (Long) (afterTime - time) / 1000.0
@@ -57,23 +61,41 @@ public class RecommenderResource {
 
 	}
 
-	private Properties _readProperties() {
-		Properties properties = new Properties();
+	public static ParametersModel _readParameters() {
+		ParametersModel parametersModel = null;
 
 		try {
 			URL configFileURL = EpnoiServer.class.getResource("epnoi.xml");
+			parametersModel = ParametersModelWrapper.read(configFileURL
+					.getPath());
 
-			FileInputStream fileInputStream = new FileInputStream(
-					new java.io.File(configFileURL.getPath()));
-			properties.loadFromXML(fileInputStream);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
+		// Before we start the server we translate those properties that are
+		// related to the
+		// path where the epnoi server is deployed in order to have complete
+		// routes
+		System.out.println("modelPath after--------->"
+				+ parametersModel.getModelPath());
+
+		System.out.println(EpnoiServer.class.getResource(parametersModel
+				.getModelPath()));
+
+		String completeModelPath = EpnoiServer.class.getResource(
+				parametersModel.getModelPath()).getPath();
+		System.out.println("modelPath before--------->" + completeModelPath);
+		parametersModel.setModelPath(completeModelPath);
+
+		String indexPath = EpnoiServer.class.getResource(
+				parametersModel.getIndexPath()).getPath();
+
+		parametersModel.setIndexPath(indexPath);
 		System.out.println(".... properties ...");
-		properties.list(System.out);
-		return properties;
+
+		return parametersModel;
 	}
 
 	/**
@@ -234,6 +256,7 @@ public class RecommenderResource {
 				recommendationResponse.setResource(workflow.getResource());
 				recommendationResponse
 						.setStrength(recommendation.getStrength());
+				recommendationResponse.setExplanation(recommendation.getExplanation().getExplanation());
 			} else if (this.epnoiCore.getModel().isFile(
 					recommendation.getItemURI())) {
 				File file = epnoiCore.getModel().getFileByURI(
@@ -242,6 +265,7 @@ public class RecommenderResource {
 				recommendationResponse.setResource(file.getResource());
 				recommendationResponse
 						.setStrength(recommendation.getStrength());
+				recommendationResponse.setExplanation(recommendation.getExplanation().getExplanation());
 			}
 			else if (this.epnoiCore.getModel().isPack(recommendation.getItemURI())){
 				Pack pack = epnoiCore.getModel().getPackByURI(
@@ -250,6 +274,7 @@ public class RecommenderResource {
 				recommendationResponse.setResource(pack.getResource());
 				recommendationResponse
 						.setStrength(recommendation.getStrength());
+				recommendationResponse.setExplanation(recommendation.getExplanation().getExplanation());
 			}
 			recommendationResponses.add(recommendationResponse);
 
