@@ -22,12 +22,13 @@ import javax.ws.rs.core.MediaType;
 import epnoi.core.EpnoiCore;
 import epnoi.model.File;
 import epnoi.model.Pack;
+import epnoi.model.Provenance;
 import epnoi.model.Recommendation;
+import epnoi.model.User;
 import epnoi.model.Workflow;
 import epnoi.model.parameterization.ParametersModel;
 import epnoi.model.parameterization.ParametersModelWrapper;
 import epnoi.server.EpnoiServer;
-
 
 @Path("/recommendations/")
 @Produces(MediaType.APPLICATION_XML)
@@ -36,8 +37,6 @@ public class RecommenderResource {
 	private String XML_FORMAT = "xml";
 	private String TEXTUAL_FORMAT = "txt";
 	private ParametersModel parametersModel;
-
-	
 
 	@Context
 	ServletContext context;
@@ -93,7 +92,10 @@ public class RecommenderResource {
 				parametersModel.getIndexPath()).getPath();
 
 		parametersModel.setIndexPath(indexPath);
-		System.out.println(".... properties ...");
+
+		String graphPath = EpnoiServer.class.getResource(
+				parametersModel.getGraphPath()).getPath();
+		parametersModel.setGraphPath(graphPath);
 
 		return parametersModel;
 	}
@@ -105,7 +107,7 @@ public class RecommenderResource {
 	 * @return
 	 */
 
-	@Path("/recommendation/user")
+	@Path("/user")
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String getRecommendationAsText(
@@ -187,7 +189,7 @@ public class RecommenderResource {
 	 * @return
 	 */
 
-	@Path("/recommendation/user/{id}")
+	@Path("/user/{id}")
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
 	public ArrayList<epnoi.server.services.responses.Recommendation> getRecommendationAsXML(
@@ -218,25 +220,76 @@ public class RecommenderResource {
 					i++;
 				}
 				return _convertToResponse(filteredRecommendationsForUser);
-			} else {
-				Properties properties = new Properties();
-				try {
-					URL configFileURL = EpnoiServer.class
-							.getResource("epnoi.xml");
-
-					FileInputStream fis = new FileInputStream(new java.io.File(
-							configFileURL.getPath()));
-					properties.loadFromXML(fis);
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-
-				System.out.println(".... properties ...");
-				properties.list(System.out);
-
-				return _convertToResponse(_orderByStrength(recommendationsForUser));
 			}
+
+			return _convertToResponse(_orderByStrength(recommendationsForUser));
+
+		}
+
+		return new ArrayList<epnoi.server.services.responses.Recommendation>();
+	}
+
+	// -----------------------------------------------------------------
+
+	@Path("/user/{id}/{type}")
+	@GET
+	@Produces(MediaType.APPLICATION_XML)
+	public ArrayList<epnoi.server.services.responses.Recommendation> getWorkflowRecommendationAsXML(
+			@DefaultValue("0") @PathParam("id") Long id,
+			@DefaultValue("any") @PathParam("type") String type,
+			@DefaultValue("0") @QueryParam("max") Integer maxNumberOfRecommedations) {
+		System.out.println("XML............id> " + id + " max> "
+				+ maxNumberOfRecommedations);
+		_initEpnoiCore();
+		ArrayList<Recommendation> recommendationsForUser = null;
+
+		if (id != 0) {
+			
+			if (type.equals("workflow")){
+				recommendationsForUser = this.epnoiCore
+						.getRecommendationSpace().getRecommendationsForUserID(
+								id, Provenance.ITEM_TYPE_WORKFLOW);
+			}else if (type.equals("user")){
+				recommendationsForUser = this.epnoiCore
+						.getRecommendationSpace().getRecommendationsForUserID(
+								id, Provenance.ITEM_TYPE_USER);
+			} 
+			else if (type.equals("file")){
+				recommendationsForUser = this.epnoiCore
+						.getRecommendationSpace().getRecommendationsForUserID(
+								id, Provenance.ITEM_TYPE_FILE);
+			}
+			
+			else if (type.equals("pack")){
+				recommendationsForUser = this.epnoiCore
+						.getInferredRecommendationSpace().getRecommendationsForUserID(
+								id, Provenance.ITEM_TYPE_PACK);
+			}
+			else if (type.equals("any")){
+				recommendationsForUser = this.epnoiCore
+						.getRecommendationSpace().getRecommendationsForUserID(
+								id);
+			} 
+		}
+
+		if (recommendationsForUser != null) {
+			if (maxNumberOfRecommedations != 0) {
+				ArrayList<Recommendation> filteredRecommendationsForUser = new ArrayList<Recommendation>();
+				Iterator<Recommendation> recommendationsIt = _orderByStrength(
+						recommendationsForUser).iterator();
+				int i = 0;
+				while (recommendationsIt.hasNext()
+						&& i < maxNumberOfRecommedations) {
+
+					filteredRecommendationsForUser.add(i,
+							recommendationsIt.next());
+					i++;
+				}
+				return _convertToResponse(filteredRecommendationsForUser);
+			}
+
+			return _convertToResponse(_orderByStrength(recommendationsForUser));
+
 		}
 
 		return new ArrayList<epnoi.server.services.responses.Recommendation>();
@@ -248,33 +301,48 @@ public class RecommenderResource {
 		for (Recommendation recommendation : recommendations) {
 			epnoi.server.services.responses.Recommendation recommendationResponse = new epnoi.server.services.responses.Recommendation();
 			recommendationResponse.setStrength(recommendation.getStrength());
-			if (this.epnoiCore.getModel().isWorkflow(
-					recommendation.getItemURI())) {
+			Provenance recommendationProvenance = recommendation
+					.getProvenance();
+			if (recommendationProvenance.getParameterByName(
+					Provenance.ITEM_TYPE).equals(Provenance.ITEM_TYPE_WORKFLOW)) {
 				Workflow workflow = epnoiCore.getModel().getWorkflowByURI(
 						recommendation.getItemURI());
 				recommendationResponse.setTitle(workflow.getTitle());
 				recommendationResponse.setResource(workflow.getResource());
 				recommendationResponse
 						.setStrength(recommendation.getStrength());
-				recommendationResponse.setExplanation(recommendation.getExplanation().getExplanation());
-			} else if (this.epnoiCore.getModel().isFile(
-					recommendation.getItemURI())) {
+				recommendationResponse.setExplanation(recommendation
+						.getExplanation().getExplanation());
+			} else if (recommendationProvenance.getParameterByName(
+					Provenance.ITEM_TYPE).equals(Provenance.ITEM_TYPE_FILE)) {
 				File file = epnoiCore.getModel().getFileByURI(
 						recommendation.getItemURI());
 				recommendationResponse.setTitle(file.getTitle());
 				recommendationResponse.setResource(file.getResource());
 				recommendationResponse
 						.setStrength(recommendation.getStrength());
-				recommendationResponse.setExplanation(recommendation.getExplanation().getExplanation());
-			}
-			else if (this.epnoiCore.getModel().isPack(recommendation.getItemURI())){
+				recommendationResponse.setExplanation(recommendation
+						.getExplanation().getExplanation());
+			} else if (recommendationProvenance.getParameterByName(
+					Provenance.ITEM_TYPE).equals(Provenance.ITEM_TYPE_PACK)) {
 				Pack pack = epnoiCore.getModel().getPackByURI(
 						recommendation.getItemURI());
 				recommendationResponse.setTitle(pack.getTitle());
 				recommendationResponse.setResource(pack.getResource());
 				recommendationResponse
 						.setStrength(recommendation.getStrength());
-				recommendationResponse.setExplanation(recommendation.getExplanation().getExplanation());
+				recommendationResponse.setExplanation(recommendation
+						.getExplanation().getExplanation());
+			} else if (recommendationProvenance.getParameterByName(
+					Provenance.ITEM_TYPE).equals(Provenance.ITEM_TYPE_USER)) {
+				User user = epnoiCore.getModel().getUserByURI(
+						recommendation.getItemURI());
+				recommendationResponse.setTitle(user.getName());
+				recommendationResponse.setResource(user.getResource());
+				recommendationResponse
+						.setStrength(recommendation.getStrength());
+				recommendationResponse.setExplanation(recommendation
+						.getExplanation().getExplanation());
 			}
 			recommendationResponses.add(recommendationResponse);
 

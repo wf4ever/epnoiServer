@@ -11,6 +11,7 @@ public class Recommendation {
 	String usedTechnique;
 	String explanation;
 
+
 	public String getExplanation() {
 		return explanation;
 	}

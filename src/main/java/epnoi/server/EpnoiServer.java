@@ -32,7 +32,7 @@ public class EpnoiServer {
 	 */
 	public static void main(String[] args) throws IOException {
 
-		final String baseUri = "http://localhost:9998/";
+		//final String baseUri = "http://localhost:9998/";
 		final Map<String, String> initParams = new HashMap<String, String>();
 
 		initParams.put("com.sun.jersey.config.property.packages",
@@ -79,7 +79,7 @@ public class EpnoiServer {
 		System.out.println("modelPath after--------->"
 				+ parametersModel.getModelPath());
 
-		System.out.println(EpnoiServer.class.getResource(parametersModel
+		System.out.println(">"+EpnoiServer.class.getResource(parametersModel
 				.getModelPath()));
 
 		String completeModelPath = EpnoiServer.class.getResource(
@@ -91,7 +91,12 @@ public class EpnoiServer {
 				parametersModel.getIndexPath()).getPath();
 
 		parametersModel.setIndexPath(indexPath);
-		System.out.println(".... properties ...");
+		
+		String graphPath = EpnoiServer.class.getResource(
+				parametersModel.getGraphPath()).getPath();
+		parametersModel.setGraphPath(graphPath);
+
+		
 
 		return parametersModel;
 	}
