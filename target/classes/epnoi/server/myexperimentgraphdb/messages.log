@@ -25121,3 +25121,384 @@
 2012-06-01 14:24:29.876+0000: GC Monitor started. 
 2012-06-01 14:24:29.877+0000: Started - database is now available
 2012-06-01 14:57:30.016+0000: GC Monitor: Application threads blocked for an additional 118ms [total block time: 0.118s]
+2012-06-04 16:06:14.064+0000: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore.relationshiptypestore.db.names non clean shutdown detected
+2012-06-04 16:06:14.074+0000: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore.relationshiptypestore.db non clean shutdown detected
+2012-06-04 16:06:14.106+0000: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore.propertystore.db.strings non clean shutdown detected
+2012-06-04 16:06:14.107+0000: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore.propertystore.db.index.keys non clean shutdown detected
+2012-06-04 16:06:14.109+0000: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore.propertystore.db.index non clean shutdown detected
+2012-06-04 16:06:14.111+0000: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore.propertystore.db.arrays non clean shutdown detected
+2012-06-04 16:06:14.120+0000: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore.propertystore.db non clean shutdown detected
+2012-06-04 16:06:14.123+0000: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore.relationshipstore.db non clean shutdown detected
+2012-06-04 16:06:14.125+0000: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore.nodestore.db non clean shutdown detected
+2012-06-04 16:06:14.147+0000: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore non clean shutdown detected
+2012-06-04 16:06:14.181+0000: Non clean shutdown detected on log [/wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/nioneo_logical.log.1]. Recovery started ...
+2012-06-04 16:06:14.185+0000: [/wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/nioneo_logical.log.1] logVersion=0 with committed tx=16
+2012-06-04 16:06:14.185+0000: [/wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/nioneo_logical.log.1] entries found=0 lastEntryPos=16
+2012-06-04 16:06:14.186+0000: Internal recovery completed, scanned 0 log entries. Recovered 0 transactions. Last tx recovered: -1
+2012-06-04 16:06:14.186+0000: XaResourceManager[/wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/nioneo_logical.log] sorting 0 xids
+2012-06-04 16:06:14.187+0000: XaResourceManager[/wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/nioneo_logical.log] checkRecoveryComplete 0 xids
+2012-06-04 16:06:14.206+0000: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore.relationshiptypestore.db.names rebuild id generator, highId=2 defragged count=0
+2012-06-04 16:06:14.210+0000: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore.propertystore.db.index.keys rebuild id generator, highId=3 defragged count=0
+2012-06-04 16:06:14.215+0000: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore.propertystore.db.index rebuild id generator, highId=2 defragged count=0
+2012-06-04 16:06:14.420+0000: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore.propertystore.db.strings rebuild id generator, highId=6996 defragged count=0
+2012-06-04 16:06:14.425+0000: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore.propertystore.db.arrays rebuild id generator, highId=1 defragged count=0
+2012-06-04 16:06:14.802+0000: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore.propertystore.db rebuild id generator, highId=7083 defragged count=0
+2012-06-04 16:06:14.904+0000: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore.relationshipstore.db rebuild id generator, highId=969 defragged count=0
+2012-06-04 16:06:14.975+0000: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore.nodestore.db rebuild id generator, highId=6915 defragged count=0
+2012-06-04 16:06:14.978+0000: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore rebuild id generator, highId=6 defragged count=0
+2012-06-04 16:06:14.979+0000: XaResourceManager[/wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/nioneo_logical.log] recovery completed.
+2012-06-04 16:06:14.979+0000: Recovery on log [/wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/nioneo_logical.log.1] completed.
+2012-06-04 16:06:15.015+0000: TM opening log: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/tm_tx_log.1
+2012-06-04 16:06:15.045+0000: Non clean shutdown detected on log [/wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/index/lucene.log.1]. Recovery started ...
+2012-06-04 16:06:15.046+0000: [/wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/index/lucene.log.1] logVersion=0 with committed tx=3
+2012-06-04 16:06:15.046+0000: [/wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/index/lucene.log.1] entries found=0 lastEntryPos=16
+2012-06-04 16:06:15.046+0000: Internal recovery completed, scanned 0 log entries. Recovered 0 transactions. Last tx recovered: -1
+2012-06-04 16:06:15.046+0000: XaResourceManager[/wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/index/lucene.log] sorting 0 xids
+2012-06-04 16:06:15.046+0000: XaResourceManager[/wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/index/lucene.log] checkRecoveryComplete 0 xids
+2012-06-04 16:06:15.046+0000: XaResourceManager[/wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/index/lucene.log] recovery completed.
+2012-06-04 16:06:15.047+0000: Recovery on log [/wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/index/lucene.log.1] completed.
+2012-06-04 16:06:15.050+0000: --- STARTUP diagnostics START ---
+2012-06-04 16:06:15.051+0000: Neo4j Kernel properties:
+    store_dir=/wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb
+    remote_logging_host=127.0.0.1
+    read_only=false
+    neo4j.ext.udc.host=udc.neo4j.org
+    logical_log=/wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/nioneo_logical.log
+    remote_logging_port=4560
+    gc_monitor_threshold=200ms
+    load_kernel_extensions=true
+    array_block_size=120
+    intercept_committing_transactions=false
+    node_auto_indexing=false
+    neostore.relationshipstore.db.mapped_memory=1028M
+    dump_configuration=false
+    gc_monitor_wait_time=100ms
+    cache_type=soft
+    intercept_deserialized_transactions=false
+    neostore.nodestore.db.mapped_memory=233M
+    neo4j.ext.udc.first_delay=600000
+    neo4j.ext.udc.reg=unreg
+    lucene_searcher_cache_size=2147483647
+    neo4j.ext.udc.interval=86400000
+    use_memory_mapped_buffers=true
+    rebuild_idgenerators_fast=true
+    ephemeral=false
+    neostore.propertystore.db.index.keys.mapped_memory=1M
+    neostore.propertystore.db.strings.mapped_memory=713M
+    neostore.propertystore.db.arrays.mapped_memory=809M
+    neo_store=/wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb/neostore
+    neostore.propertystore.db.index.mapped_memory=1M
+    backup_slave=false
+    neostore.propertystore.db.mapped_memory=839M
+    gcr_cache_min_log_interval=60s
+    relationship_auto_indexing=false
+    relationship_grab_size=100
+    string_block_size=120
+    lucene_writer_cache_size=2147483647
+    grab_file_lock=true
+    node_cache_array_fraction=1.0
+    remote_logging_enabled=false
+    allow_store_upgrade=false
+    execution_guard_enabled=false
+    neo4j.ext.udc.enabled=true
+    relationship_cache_array_fraction=1.0
+2012-06-04 16:06:15.059+0000: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+2012-06-04 16:06:15.060+0000: System memory information:
+    Total Physical memory: 8,00 GB
+    Free Physical memory: 765,31 MB
+    Committed virtual memory: 2,69 GB
+    Total swap space: 2,00 GB
+    Free swap space: 901,86 MB
+2012-06-04 16:06:15.090+0000: JVM memory information:
+    Free  memory: 48,95 MB
+    Total memory: 81,06 MB
+    Max   memory: 123,94 MB
+    Garbage Collector: ParNew: [Par Eden Space, Par Survivor Space]
+    Garbage Collector: ConcurrentMarkSweep: [Par Eden Space, Par Survivor Space, CMS Old Gen, CMS Perm Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=2,44 MB, used=1,41 MB, max=48,00 MB, threshold=0,00 B
+    Memory Pool: Par Eden Space (Heap memory): committed=16,63 MB, used=3,67 MB, max=16,63 MB, threshold=?
+    Memory Pool: Par Survivor Space (Heap memory): committed=2,06 MB, used=2,02 MB, max=2,06 MB, threshold=?
+    Memory Pool: CMS Old Gen (Heap memory): committed=62,38 MB, used=26,42 MB, max=105,25 MB, threshold=0,00 B
+    Memory Pool: CMS Perm Gen (Non-heap memory): committed=21,13 MB, used=21,11 MB, max=82,00 MB, threshold=0,00 B
+2012-06-04 16:06:15.100+0000: Operating system information:
+    Operating System: Mac OS X; version: 10.6.8; arch: x86_64; cpus: 2
+    Max number of file descriptors: 10240
+    Number of open file descriptors: 187
+    Process id: 59992@usuariop53.fi.upm.es
+    Byte order: LITTLE_ENDIAN
+2012-06-04 16:06:15.108+0000: JVM information:
+    VM Name: Java HotSpot(TM) 64-Bit Server VM
+    VM Vendor: Apple Inc.
+    VM Version: 20.6-b01-415
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Dfile.encoding=MacRoman]
+2012-06-04 16:06:15.109+0000: Java classpath:
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/tika/tika-parsers/0.10/tika-parsers-0.10-jdk14.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/mahout/mahout-core/0.5/mahout-core-0.5.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/commons-digester/commons-digester/1.8/commons-digester-1.8.jar
+     [bootstrap] /System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaRuntimeSupport.framework/Versions/A/Resources/Java/JavaRuntimeSupport.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/neo4j/neo4j-udc/1.8.M01/neo4j-udc-1.8.M01.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/de/l3s/boilerpipe/boilerpipe/1.1.0/boilerpipe-1.1.0.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/com/sun/grizzly/grizzly-http-servlet/1.9.8/grizzly-http-servlet-1.9.8.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/asm/asm/3.1/asm-3.1.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/tika/tika-core/0.10/tika-core-0.10.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/uncommons/maths/uncommons-maths/1.2/uncommons-maths-1.2.jar
+     [loader.1] file:/System/Library/Java/Extensions/vecmath.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/tika/tika-core/0.10/tika-core-0.10-jdk14.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/james/apache-mime4j-core/0.7/apache-mime4j-core-0.7.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/commons-configuration/commons-configuration/1.6/commons-configuration-1.6.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/scala-lang/scala-library/2.9.1-1/scala-library-2.9.1-1.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/lucene/lucene-core/3.6.0/lucene-core-3.6.0.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/bouncycastle/bcprov-jdk15/1.45/bcprov-jdk15-1.45.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.8.2/jackson-core-asl-1.8.2.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/mahout/commons/commons-cli/2.0-mahout/commons-cli-2.0-mahout.jar
+     [loader.1] file:/System/Library/Java/Extensions/libJ3D.jnilib
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/lucene/lucene-analyzers/3.1.0/lucene-analyzers-3.1.0.jar
+     [loader.1] file:/System/Library/Java/Extensions/QTJava.zip
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/ant/ant/1.6.5/ant-1.6.5.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/slf4j/slf4j-api/1.6.0/slf4j-api-1.6.0.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/mortbay/jetty/jsp-2.1/6.1.14/jsp-2.1-6.1.14.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/commons/commons-compress/1.1/commons-compress-1.1.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/net/java/dev/jets3t/jets3t/0.7.1/jets3t-0.7.1.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/neo4j/neo4j-jmx/1.8.M01/neo4j-jmx-1.8.M01.jar
+     [loader.1] file:/System/Library/Java/Extensions/j3daudio.jar
+     [loader.1] file:/System/Library/Java/Extensions/libQTJNative.jnilib
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/neo4j/neo4j-cypher/1.8.M01/neo4j-cypher-1.8.M01.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/net/sf/kosmosfs/kfs/0.3/kfs-0.3.jar
+     [loader.1] file:/System/Library/Java/Extensions/j3dcore.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/neo4j/neo4j-lucene-index/1.8.M01/neo4j-lucene-index-1.8.M01.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/neo4j/neo4j-kernel/1.8.M01/neo4j-kernel-1.8.M01.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/com/drewnoakes/metadata-extractor/2.4.0-beta-1/metadata-extractor-2.4.0-beta-1.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/neo4j/neo4j-graph-matching/1.8.M01/neo4j-graph-matching-1.8.M01.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/poi/poi/3.8-beta4/poi-3.8-beta4.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.8.2/jackson-mapper-asl-1.8.2.jar
+     [loader.1] file:/System/Library/Java/Extensions/jai_core.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/com/sun/grizzly/grizzly-servlet-webserver/1.9.8/grizzly-servlet-webserver-1.9.8.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/mortbay/jetty/jsp-api-2.1/6.1.14/jsp-api-2.1-6.1.14.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/mortbay/jetty/jetty/6.1.26/jetty-6.1.26.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/com/google/collections/google-collections/1.0-rc2/google-collections-1.0-rc2.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/commons/commons-math/2.1/commons-math-2.1.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/xmlenc/xmlenc/0.52/xmlenc-0.52.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/commons-net/commons-net/1.4.1/commons-net-1.4.1.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/mahout/mahout-math/0.5/mahout-math-0.5.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/tomcat/jasper-runtime/5.5.12/jasper-runtime-5.5.12.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/commons-el/commons-el/1.0/commons-el-1.0.jar
+     [classpath + loader.0] file:/wf4ever/epnoiServer/target/classes/
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/jce.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/com/sun/jersey/jersey-server/1.9.1/jersey-server-1.9.1.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar
+     [loader.1] file:/System/Library/Java/Extensions/AppleScriptEngine.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/apple_provider.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/poi/poi-ooxml/3.8-beta4/poi-ooxml-3.8-beta4.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/tomcat/jasper-compiler/5.5.12/jasper-compiler-5.5.12.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar
+     [loader.1] file:/System/Library/Java/Extensions/dns_sd.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/commons-beanutils/commons-beanutils-core/1.8.0/commons-beanutils-core-1.8.0.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/commons-pool/commons-pool/1.4/commons-pool-1.4.jar
+     [loader.1] file:/System/Library/Java/Extensions/MRJToolkit.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/mortbay/jetty/jetty-util/6.1.26/jetty-util-6.1.26.jar
+     [loader.1] file:/System/Library/Java/Extensions/libmlib_jai.jnilib
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/edu/ucar/netcdf/4.2-min/netcdf-4.2-min.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/rome/rome/0.9/rome-0.9.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/geronimo/specs/geronimo-stax-api_1.0_spec/1.0.1/geronimo-stax-api_1.0_spec-1.0.1.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/poi/poi-ooxml-schemas/3.8-beta4/poi-ooxml-schemas-3.8-beta4.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/com/sun/jersey/jersey-bundle/1.9/jersey-bundle-1.9.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/com/sun/grizzly/grizzly-portunif/1.9.8/grizzly-portunif-1.9.8.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/mortbay/jetty/servlet-api/2.5-20081211/servlet-api-2.5-20081211.jar
+     [classpath + loader.0] file:/wf4ever/epnoi/target/classes/
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/dnsns.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/pdfbox/fontbox/1.6.0/fontbox-1.6.0.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/bouncycastle/bcmail-jdk15/1.45/bcmail-jdk15-1.45.jar
+     [loader.1] file:/System/Library/Java/Extensions/mlibwrapper_jai.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/localedata.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/jdom/jdom/1.0/jdom-1.0.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/log4j/log4j/1.2.12/log4j-1.2.12.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/com/sun/grizzly/grizzly-rcm/1.9.8/grizzly-rcm-1.9.8.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/xmlbeans/xmlbeans/2.3.0/xmlbeans-2.3.0.jar
+     [loader.1] file:/System/Library/Java/Extensions/libJ3DAudio.jnilib
+     [loader.1] file:/System/Library/Java/Extensions/libAppleScriptEngine.jnilib
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar
+     [loader.1] file:/System/Library/Java/Extensions/libJ3DUtils.jnilib
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/eclipse/jdt/core/3.1.1/core-3.1.1.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/com/google/guava/guava/r03/guava-r03.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/com/sun/jersey/jersey-core/1.9.1/jersey-core-1.9.1.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/pdfbox/jempbox/1.6.0/jempbox-1.6.0.jar
+     [loader.1] file:/System/Library/Java/Extensions/j3dutils.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/com/sun/grizzly/grizzly-utils/1.9.8/grizzly-utils-1.9.8.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/com/sun/grizzly/grizzly-framework/1.9.8/grizzly-framework-1.9.8.jar
+     [loader.1] file:/System/Library/Java/Extensions/jai_codec.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/commons-logging/commons-logging/1.0.3/commons-logging-1.0.3.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/hadoop/hadoop-core/0.20.203.0/hadoop-core-0.20.203.0.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/hadoop/hadoop-tools/0.20.203.0/hadoop-tools-0.20.203.0.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunjce_provider.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/james/apache-mime4j-dom/0.7/apache-mime4j-dom-0.7.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/uncommons/watchmaker/watchmaker-framework/0.6.2/watchmaker-framework-0.6.2.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/neo4j/neo4j-community/1.8.M01/neo4j-community-1.8.M01.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/commons-httpclient/commons-httpclient/3.0.1/commons-httpclient-3.0.1.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/neo4j/neo4j-graph-algo/1.8.M01/neo4j-graph-algo-1.8.M01.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/pdfbox/pdfbox/1.6.0/pdfbox-1.6.0.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/com/sun/grizzly/grizzly-http/1.9.8/grizzly-http-1.9.8.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/mahout/mahout-collections/1.0/mahout-collections-1.0.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/commons-dbcp/commons-dbcp/1.2.2/commons-dbcp-1.2.2.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/apache/poi/poi-scratchpad/3.8-beta4/poi-scratchpad-3.8-beta4.jar
+     [bootstrap] /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/hsqldb/hsqldb/1.8.0.10/hsqldb-1.8.0.10.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar
+     [loader.1] file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunpkcs11.jar
+     [classpath + loader.0] file:/Users/rafita/.m2/repository/org/mortbay/jetty/servlet-api-2.5/6.1.14/servlet-api-2.5-6.1.14.jar
+2012-06-04 16:06:15.127+0000: Library path:
+    /wf4ever/epnoiServer
+    /Library/Java/Extensions
+    /System/Library/Java/Extensions
+    /usr/lib/java
+2012-06-04 16:06:15.128+0000: System.properties:
+    sun.boot.library.path = /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries
+    awt.nativeDoubleBuffering = true
+    gopherProxySet = false
+    mrj.build = 10M3635
+    path.separator = :
+    file.encoding.pkg = sun.io
+    sun.java.launcher = SUN_STANDARD
+    user.country = ES
+    sun.os.patch.level = unknown
+    user.dir = /wf4ever/epnoiServer
+    sun.jnu.encoding = MacRoman
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    http.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    user.home = /Users/rafita
+    user.timezone = Europe/Madrid
+    file.encoding = MacRoman
+    user.name = rafita
+    sun.java.command = epnoi.server.EpnoiServer
+    sun.arch.data.model = 64
+    user.language = es
+    awt.toolkit = apple.awt.CToolkit
+    file.separator = /
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    mrj.version = 1060.1.6.0_31-415
+    socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    sun.cpu.isalist = 
+2012-06-04 16:06:15.129+0000: --- STARTUP diagnostics END ---
+2012-06-04 16:06:15.194+0000: Extension org.neo4j.kernel.KernelExtension[kernel udc] loaded ok
+2012-06-04 16:06:15.280+0000: Extension org.neo4j.kernel.KernelExtension[kernel jmx] loaded ok
+2012-06-04 16:06:15.285+0000: --- STARTUP diagnostics for KernelDiagnostics:Versions START ---
+2012-06-04 16:06:15.285+0000: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId[time:1337638007873, id:723833969442585653, store version: 13561656364791302]
+2012-06-04 16:06:15.285+0000: Kernel version: Neo4j - Graph Database Kernel 1.8.M01
+2012-06-04 16:06:15.285+0000: Neo4j component versions:
+2012-06-04 16:06:15.286+0000:   Neo4j - Graph Database Kernel 1.8.M01
+2012-06-04 16:06:15.286+0000: --- STARTUP diagnostics for KernelDiagnostics:Versions END ---
+2012-06-04 16:06:15.289+0000: --- STARTUP diagnostics for NEO_STORE_VERSIONS START ---
+2012-06-04 16:06:15.290+0000: Store versions:
+    Store versions:
+      NeoStore v0.A.0
+      NodeStore v0.A.0
+      RelationshipStore v0.A.0
+      RelationshipTypeStore v0.A.0
+      PropertyStore v0.A.0
+      PropertyIndexStore v0.A.0
+      StringPropertyStore v0.A.0
+      ArrayPropertyStore v0.A.0
+2012-06-04 16:06:15.290+0000: --- STARTUP diagnostics for NEO_STORE_VERSIONS END ---
+2012-06-04 16:06:15.290+0000: --- STARTUP diagnostics for NEO_STORE_ID_USAGE START ---
+2012-06-04 16:06:15.290+0000: Id usage:
+    Id usage:
+      NodeStore: used=6915 high=6914
+      RelationshipStore: used=969 high=968
+      RelationshipTypeStore: used=1 high=0
+      PropertyStore: used=7083 high=7082
+      PropertyIndexStore: used=2 high=1
+      StringPropertyStore: used=6996 high=6995
+      ArrayPropertyStore: used=1 high=0
+2012-06-04 16:06:15.291+0000: --- STARTUP diagnostics for NEO_STORE_ID_USAGE END ---
+2012-06-04 16:06:15.292+0000: --- STARTUP diagnostics for KernelDiagnostics:StoreFiles START ---
+2012-06-04 16:06:15.292+0000: Storage files:
+    active_tx_log: 11,00 B
+    index:
+      lucene:
+        node:
+          users:
+            _0.fdt: 372,14 kB
+            _0.fdx: 54,02 kB
+            _0.fnm: 17,00 B
+            _0.frq: 26,88 kB
+            _0.nrm: 13,51 kB
+            _0.prx: 13,50 kB
+            _0.tii: 1,45 kB
+            _0.tis: 94,62 kB
+            segments.gen: 20,00 B
+            segments_1: 233,00 B
+          - Total: 576,39 kB
+        - Total: 576,39 kB
+      - Total: 576,39 kB
+      lucene-store.db: 40,00 B
+      lucene.log.1: 16,00 B
+      lucene.log.active: 4,00 B
+    - Total: 576,45 kB
+    index.db: 103,00 B
+    lock: 0,00 B
+    messages.log: 1,83 MB
+    neostore: 54,00 B
+    neostore.id: 9,00 B
+    neostore.nodestore.db: 238,59 kB
+    neostore.nodestore.db.id: 9,00 B
+    neostore.propertystore.db: 859,12 kB
+    neostore.propertystore.db.arrays: 128,00 B
+    neostore.propertystore.db.arrays.id: 9,00 B
+    neostore.propertystore.db.id: 9,00 B
+    neostore.propertystore.db.index: 1,02 kB
+    neostore.propertystore.db.index.id: 9,00 B
+    neostore.propertystore.db.index.keys: 1,00 kB
+    neostore.propertystore.db.index.keys.id: 9,00 B
+    neostore.propertystore.db.strings: 1,43 MB
+    neostore.propertystore.db.strings.id: 9,00 B
+    neostore.relationshipstore.db: 1,03 MB
+    neostore.relationshipstore.db.id: 9,00 B
+    neostore.relationshiptypestore.db: 5,00 B
+    neostore.relationshiptypestore.db.id: 9,00 B
+    neostore.relationshiptypestore.db.names: 76,00 B
+    neostore.relationshiptypestore.db.names.id: 9,00 B
+    nioneo_logical.log.1: 16,00 B
+    nioneo_logical.log.active: 4,00 B
+    tm_tx_log.1: 0,00 B
+2012-06-04 16:06:15.311+0000: --- STARTUP diagnostics for KernelDiagnostics:StoreFiles END ---
+2012-06-04 16:06:15.318+0000: GC Monitor started. 
+2012-06-04 16:06:15.319+0000: Started - database is now available
+2012-06-04 16:21:52.108+0000: GC Monitor: Application threads blocked for an additional 109ms [total block time: 0.109s]
+2012-06-04 16:35:54.414+0000: GC Monitor: Application threads blocked for an additional 108ms [total block time: 0.217s]
+2012-06-04 17:53:06.082+0000: GC Monitor: Application threads blocked for an additional 1417ms [total block time: 1.634s]
+2012-06-04 17:53:08.008+0000: GC Monitor: Application threads blocked for an additional 1826ms [total block time: 3.46s]
+2012-06-04 17:54:08.114+0000: GC Monitor: Application threads blocked for an additional 48095ms [total block time: 51.555s]
+2012-06-04 18:41:12.097+0000: GC Monitor: Application threads blocked for an additional 2823682ms [total block time: 2875.237s]
+2012-06-04 20:15:06.118+0000: GC Monitor: Application threads blocked for an additional 123ms [total block time: 2875.36s]
+2012-06-04 22:15:12.447+0000: GC Monitor: Application threads blocked for an additional 105ms [total block time: 2875.465s]
+2012-06-04 23:46:53.543+0000: GC Monitor: Application threads blocked for an additional 51321ms [total block time: 2926.786s]
+2012-06-05 00:04:04.020+0000: GC Monitor: Application threads blocked for an additional 121ms [total block time: 2926.907s]
+2012-06-05 00:08:31.036+0000: GC Monitor: Application threads blocked for an additional 51984ms [total block time: 2978.891s]
+2012-06-05 08:26:05.102+0000: GC Monitor: Application threads blocked for an additional 29853763ms [total block time: 32832.652s]
