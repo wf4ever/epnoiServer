@@ -1,72 +1,16 @@
-31-ago-2012 13:16:47 epnoi.server.EpnoiServer _readParameters
+04-sep-2012 0:43:06 epnoi.server.EpnoiServer _readParameters
 INFO: The modelPath is made absolute: intial value: lastImportedModel.xml
-31-ago-2012 13:16:47 epnoi.server.EpnoiServer _readParameters
+04-sep-2012 0:43:06 epnoi.server.EpnoiServer _readParameters
 INFO: The modelPath is made absolute: absolute value: /wf4ever/epnoiServer/target/classes/epnoi/server/lastImportedModel.xml
-31-ago-2012 13:16:47 epnoi.server.EpnoiServer _readParameters
+04-sep-2012 0:43:06 epnoi.server.EpnoiServer _readParameters
 INFO: The index Path is made absolute: intial value: indexMyExperiment
-31-ago-2012 13:16:47 epnoi.server.EpnoiServer _readParameters
+04-sep-2012 0:43:06 epnoi.server.EpnoiServer _readParameters
 INFO: The indexPath is made absolute: absolute value: /wf4ever/epnoiServer/target/classes/epnoi/server/indexMyExperiment
-31-ago-2012 13:16:47 epnoi.server.EpnoiServer _readParameters
+04-sep-2012 0:43:06 epnoi.server.EpnoiServer _readParameters
 INFO: The graph Path is made absolute: intial value: myexperimentgraphdb
-31-ago-2012 13:16:47 epnoi.server.EpnoiServer _readParameters
+04-sep-2012 0:43:06 epnoi.server.EpnoiServer _readParameters
 INFO: The graph path is made absolute: absolute value: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb
-31-ago-2012 13:16:47 epnoi.server.EpnoiServer main
+04-sep-2012 0:43:06 epnoi.server.EpnoiServer main
 INFO: Starting grizzly...
-31-ago-2012 13:16:48 epnoi.server.EpnoiServer main
+04-sep-2012 0:43:07 epnoi.server.EpnoiServer main
 INFO: Epnoi server started with WADL available at http://localhost:8015/application.wadl
-31-ago-2012 13:18:13 com.sun.jersey.api.core.PackagesResourceConfig init
-INFO: Scanning for root resource and provider classes in the packages:
-  epnoi.server.services
-31-ago-2012 13:18:13 com.sun.jersey.api.core.ScanningResourceConfig logClasses
-INFO: Root resource classes found:
-  class epnoi.server.services.RecommenderResourceOld
-  class epnoi.server.services.RecommendationsSetResource
-  class epnoi.server.services.RecommenderResource
-  class epnoi.server.services.SetUpResource
-  class epnoi.server.services.HelloWorldResource
-31-ago-2012 13:18:13 com.sun.jersey.api.core.ScanningResourceConfig init
-INFO: No provider classes found.
-31-ago-2012 13:18:13 com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
-INFO: Initiating Jersey application, version 'Jersey: 1.9.1 09/14/2011 02:05 PM'
-31-ago-2012 13:18:14 epnoi.server.services.RecommendationsSetResource getRecommendationAsXMLFiltered
-INFO: Handling the filtered request of recommendations whith the following parameters: id> 2 max> 0 type> users
-31-ago-2012 13:18:14 epnoi.server.services.RecommendationsSetResource _readParameters
-INFO: The modelPath is made absolute: intial value: lastImportedModel.xml
-31-ago-2012 13:18:14 epnoi.server.services.RecommendationsSetResource _readParameters
-INFO: The modelPath is made absolute: absolute value: /wf4ever/epnoiServer/target/classes/epnoi/server/lastImportedModel.xml
-31-ago-2012 13:18:14 epnoi.server.services.RecommendationsSetResource _readParameters
-INFO: The index Path is made absolute: intial value: indexMyExperiment
-31-ago-2012 13:18:14 epnoi.server.services.RecommendationsSetResource _readParameters
-INFO: The indexPath is made absolute: absolute value: /wf4ever/epnoiServer/target/classes/epnoi/server/indexMyExperiment
-31-ago-2012 13:18:14 epnoi.server.services.RecommendationsSetResource _readParameters
-INFO: The graph Path is made absolute: intial value: myexperimentgraphdb
-31-ago-2012 13:18:14 epnoi.server.services.RecommendationsSetResource _readParameters
-INFO: The graph path is made absolute: absolute value: /wf4ever/epnoiServer/target/classes/epnoi/server/myexperimentgraphdb
-31-ago-2012 13:18:14 epnoi.core.EpnoiCore init
-INFO: Initializing the epnoi core
-31-ago-2012 13:18:16 epnoi.core.EpnoiCore _initRecommenders
-INFO: Initializing recommenders
-31-ago-2012 13:18:17 epnoi.core.EpnoiCore _initRecommenders
-INFO: The following recommenders have been initialized: 
-	> (recommenderACollaborative Filter Recommender[ItemType:WORKFLOWS_COLLABORATIVE_FILTER, #Recommendations:5, NeighbourhoodType: NEIGHBOURHOOD_TYPE_NEAREST, NeighbourhoodSize: 5 , NeighbourhoodThreshold:null]
-	> (recommenderBCollaborative Filter Recommender[ItemType:FILES_COLLABORATIVE_FILTER, #Recommendations:5, NeighbourhoodType: NEIGHBOURHOOD_TYPE_NEAREST, NeighbourhoodSize: 5 , NeighbourhoodThreshold:null]
-	> (recommenderCKeyword Recommender[#QueryHits:10, IndexPathnull]
-
-31-ago-2012 13:18:17 epnoi.core.EpnoiCore _initRecommendationSpace
-INFO: Initializing the Recommendations Space
-31-ago-2012 13:18:39 epnoi.core.EpnoiCore _initRecommendationSpace
-INFO: The recommendation space has been initialized with 4546 recommendations
-31-ago-2012 13:18:39 epnoi.core.EpnoiCore _initInferenceEngine
-INFO: Initializing the Inference Engine
-31-ago-2012 13:18:40 epnoi.core.EpnoiCore _initInferredRecommendationSpace
-INFO: Initializing the inferred recommendations space
-31-ago-2012 13:18:40 epnoi.core.EpnoiCore _initInferredRecommendationSpace
-INFO: The inferred recommend space has been initialized with 225
-31-ago-2012 13:23:34 epnoi.server.services.RecommendationsSetResource getRecommendationAsXMLFiltered
-INFO: Handling the filtered request of recommendations whith the following parameters: id> 2 max> 0 type> workflows
-31-ago-2012 16:18:18 epnoi.server.services.RecommendationsSetResource getRecommendationAsXML
-INFO: Handling the request of recommendations whith the following parameters: id> 2 max> 0
-31-ago-2012 16:18:24 epnoi.server.services.RecommendationsSetResource getRecommendationAsXML
-INFO: Handling the request of recommendations whith the following parameters: id> 3 max> 0
-31-ago-2012 16:18:28 epnoi.server.services.RecommendationsSetResource getRecommendationAsXML
-INFO: Handling the request of recommendations whith the following parameters: id> 5 max> 0
