@@ -24,14 +24,14 @@
 		<numberOfRecommendations>5</numberOfRecommendations>
 		<similarity>SIMILARITY_EUCLIDEAN</similarity>
 	</collaborativeFilteringRecommender>
-
+<!-- 
 	<socialRecommender>
 		<type>USER_SOCIAL_NETWORK</type>
 		<URI>recommenderD</URI>
 
 		<numberOfRecommendations>5</numberOfRecommendations>
 	</socialRecommender>
-
+-->
 	<inferenceEngine>
 		<numberOfInteractions>50</numberOfInteractions>
 		<minimumActivation>0.1</minimumActivation>
@@ -43,7 +43,7 @@
 	<modelPath>lastImportedModel.xml</modelPath>
 	
 	<!-- server properties -->
-	<path>recommender</path>
+	<path></path>
 	<hostname>localhost</hostname>
 	<port>8015</port>
 </parametersModel>

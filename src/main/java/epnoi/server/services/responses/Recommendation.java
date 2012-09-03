@@ -10,6 +10,8 @@ public class Recommendation {
 	String resource;
 	String usedTechnique;
 	String explanation;
+	String technique;
+	String itemType;
 
 
 	public String getExplanation() {
@@ -50,6 +52,14 @@ public class Recommendation {
 
 	public void setUsedTechnique(String usedTechnique) {
 		this.usedTechnique = usedTechnique;
+	}
+
+	public String getItemType() {
+		return itemType;
+	}
+
+	public void setItemType(String itemType) {
+		this.itemType = itemType;
 	}
 
 }

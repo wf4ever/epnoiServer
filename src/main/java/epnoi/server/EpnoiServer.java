@@ -1,21 +1,17 @@
 package epnoi.server;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Properties;
-
-import org.omg.stub.java.rmi._Remote_Stub;
+import java.util.logging.Logger;
 
 import com.sun.grizzly.http.SelectorThread;
 import com.sun.jersey.api.container.grizzly.GrizzlyWebContainerFactory;
 
+import epnoi.logging.EpnoiLogger;
 import epnoi.model.parameterization.ParametersModel;
 import epnoi.model.parameterization.ParametersModelWrapper;
-import epnoi.server.services.RecommenderResource;
 
 /*
  import com.sun.grizzly.http.SelectorThread;
@@ -23,16 +19,12 @@ import epnoi.server.services.RecommenderResource;
  */
 
 public class EpnoiServer {
-	/*
-	 * public static final String HOSTNAME_PROPERTY = "server.hostname"; public
-	 * static final String PORT_PROPERTY = "server.port"; public static final
-	 * String PATH_PROPERTY = "server.path"; public static final String
-	 * MODEL_PATH_PROPERTY = "model.path"; public static final String
-	 * INDEX_PATH_PROPERTY = "index.path";
-	 */
-	public static void main(String[] args) throws IOException {
+	private static final Logger logger = Logger.getLogger(EpnoiServer.class
+			.getName());
 
-		//final String baseUri = "http://localhost:9998/";
+	public static void main(String[] args) throws IOException {
+		EpnoiLogger.setup();
+		// final String baseUri = "http://localhost:9998/";
 		final Map<String, String> initParams = new HashMap<String, String>();
 
 		initParams.put("com.sun.jersey.config.property.packages",
@@ -45,16 +37,24 @@ public class EpnoiServer {
 		String serverPath = "http://" + parametersModel.getHostname() + ":"
 				+ parametersModel.getPort() + "/" + parametersModel.getPath();
 
-		System.out.println("Starting grizzly...");
-		SelectorThread threadSelector = GrizzlyWebContainerFactory.create(
-				serverPath, initParams);
-		
-		System.out.println(
-				"Epnoi server started with WADL available at " + serverPath
-						+ "application.wadl\n");
-						
+		logger.info("Starting grizzly...");
+
+		SelectorThread threadSelector = null;
+		try {
+			threadSelector = GrizzlyWebContainerFactory.create(serverPath,
+					initParams);
+		} catch (Exception e) {
+
+		}
+		logger.info("Epnoi server started with WADL available at " + serverPath
+				+ "application.wadl");
+
 		System.in.read();
-		threadSelector.stopEndpoint();
+		if (threadSelector != null) {
+
+			threadSelector.stopEndpoint();
+		}
+		logger.info("The Recommender Service has been shut down propperly");
 		System.exit(0);
 
 	}
@@ -74,29 +74,42 @@ public class EpnoiServer {
 
 		// Before we start the server we translate those properties that are
 		// related to the
-		// path where the erponoi server is deployed in order to have complete
+		// path where the epnoi server is deployed in order to have complete
 		// routes
-		System.out.println("modelPath after--------->"
+
+		logger.info("The modelPath is made absolute: intial value: "
 				+ parametersModel.getModelPath());
 
-		System.out.println(">"+EpnoiServer.class.getResource(parametersModel
-				.getModelPath()));
+		System.out
+				.println(">"
+						+ EpnoiServer.class.getResource(parametersModel
+								.getModelPath()));
 
 		String completeModelPath = EpnoiServer.class.getResource(
 				parametersModel.getModelPath()).getPath();
-		System.out.println("modelPath before--------->" + completeModelPath);
+
 		parametersModel.setModelPath(completeModelPath);
+		logger.info("The modelPath is made absolute: absolute value: "
+				+ parametersModel.getModelPath());
+
+		logger.info("The index Path is made absolute: intial value: "
+				+ parametersModel.getIndexPath());
 
 		String indexPath = EpnoiServer.class.getResource(
 				parametersModel.getIndexPath()).getPath();
 
 		parametersModel.setIndexPath(indexPath);
-		
+		logger.info("The indexPath is made absolute: absolute value: "
+				+ parametersModel.getIndexPath());
+		logger.info("The graph Path is made absolute: intial value: "
+				+ parametersModel.getGraphPath());
+
 		String graphPath = EpnoiServer.class.getResource(
 				parametersModel.getGraphPath()).getPath();
-		parametersModel.setGraphPath(graphPath);
 
-		
+		parametersModel.setGraphPath(graphPath);
+		logger.info("The graph path is made absolute: absolute value: "
+				+ parametersModel.getGraphPath());
 
 		return parametersModel;
 	}
