@@ -25,7 +25,7 @@ import epnoi.model.Recommendation;
 import epnoi.model.User;
 import epnoi.model.Workflow;
 import epnoi.model.parameterization.ParametersModel;
-import epnoi.model.parameterization.ParametersModelWrapper;
+import epnoi.model.parameterization.ParametersModelReader;
 import epnoi.server.EpnoiServer;
 import epnoi.server.services.responses.RecommendationsSet;
 
@@ -33,10 +33,9 @@ import epnoi.server.services.responses.RecommendationsSet;
 @Produces(MediaType.APPLICATION_XML)
 public class RecommendationsSetResource {
 	private final static Logger logger = Logger
-			.getLogger(RecommenderResourceOld.class.getName());
+			.getLogger(RecommendationsSetResource.class.getName());
 	private String EPNOI_CORE_ATTRIBUTE = "EPNOI_CORE";
-	private String XML_FORMAT = "xml";
-	private String TEXTUAL_FORMAT = "txt";
+	
 	private ParametersModel parametersModel;
 
 	@Context
@@ -61,12 +60,12 @@ public class RecommendationsSetResource {
 
 	}
 
-	public static ParametersModel _readParameters() {
+	public ParametersModel _readParameters() {
 		ParametersModel parametersModel = null;
 
 		try {
 			URL configFileURL = EpnoiServer.class.getResource("epnoi.xml");
-			parametersModel = ParametersModelWrapper.read(configFileURL
+			parametersModel = ParametersModelReader.read(configFileURL
 					.getPath());
 
 		} catch (Exception e) {
@@ -79,6 +78,8 @@ public class RecommendationsSetResource {
 		// path where the epnoi server is deployed in order to have complete
 		// routes
 
+		
+		
 		logger.info("The modelPath is made absolute: intial value: "
 				+ parametersModel.getModelPath());
 
@@ -115,6 +116,7 @@ public class RecommendationsSetResource {
 
 		return parametersModel;
 	}
+
 
 	@Path("/user/{id}")
 	@GET

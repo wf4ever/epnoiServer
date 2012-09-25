@@ -61,5 +61,10 @@ public class Recommendation {
 	public void setItemType(String itemType) {
 		this.itemType = itemType;
 	}
+	
+	@Override
+	public String toString() {
+		return "R [" + this.strength + " Item ((URI) " + this.resource +"(Technique) "+this.usedTechnique+" ]";
+	}
 
 }

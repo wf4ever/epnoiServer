@@ -11,7 +11,7 @@ import com.sun.jersey.api.container.grizzly.GrizzlyWebContainerFactory;
 
 import epnoi.logging.EpnoiLogger;
 import epnoi.model.parameterization.ParametersModel;
-import epnoi.model.parameterization.ParametersModelWrapper;
+import epnoi.model.parameterization.ParametersModelReader;
 
 /*
  import com.sun.grizzly.http.SelectorThread;
@@ -23,7 +23,9 @@ public class EpnoiServer {
 			.getName());
 
 	public static void main(String[] args) throws IOException {
+		//The first step is to set up the logger
 		EpnoiLogger.setup();
+		
 		// final String baseUri = "http://localhost:9998/";
 		final Map<String, String> initParams = new HashMap<String, String>();
 
@@ -64,7 +66,7 @@ public class EpnoiServer {
 
 		try {
 			URL configFileURL = EpnoiServer.class.getResource("epnoi.xml");
-			parametersModel = ParametersModelWrapper.read(configFileURL
+			parametersModel = ParametersModelReader.read(configFileURL
 					.getPath());
 
 		} catch (Exception e) {

@@ -28,7 +28,7 @@ import epnoi.model.Recommendation;
 import epnoi.model.User;
 import epnoi.model.Workflow;
 import epnoi.model.parameterization.ParametersModel;
-import epnoi.model.parameterization.ParametersModelWrapper;
+import epnoi.model.parameterization.ParametersModelReader;
 import epnoi.server.EpnoiServer;
 
 @Path("/recommendations/")
@@ -68,7 +68,7 @@ public class RecommenderResourceOld {
 
 		try {
 			URL configFileURL = EpnoiServer.class.getResource("epnoi.xml");
-			parametersModel = ParametersModelWrapper.read(configFileURL
+			parametersModel = ParametersModelReader.read(configFileURL
 					.getPath());
 
 		} catch (Exception e) {

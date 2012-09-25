@@ -20,7 +20,7 @@ import epnoi.model.Rating;
 import epnoi.model.Recommendation;
 import epnoi.model.User;
 import epnoi.model.parameterization.ParametersModel;
-import epnoi.model.parameterization.ParametersModelWrapper;
+import epnoi.model.parameterization.ParametersModelReader;
 import epnoi.server.EpnoiServer;
 
 @Path("/recommender/setup")
@@ -33,7 +33,7 @@ public class SetUpResource {
 
 	private EpnoiCore epnoiCore = null;
 	private ParametersModel parametersModel;
-
+	// -----------------------------------------------------------------
 	@GET
 	@Produces("text/xml")
 	public String getRecommendation() {
@@ -42,7 +42,7 @@ public class SetUpResource {
 				.getAllRecommendations().size();
 		return "I have" + numberOfRecommendations + " recommendations \n";
 	}
-
+	// -----------------------------------------------------------------
 	@Path("/wakeup")
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
@@ -248,7 +248,7 @@ public class SetUpResource {
 
 		try {
 			URL configFileURL = EpnoiServer.class.getResource("epnoi.xml");
-			parametersModel = ParametersModelWrapper.read(configFileURL
+			parametersModel = ParametersModelReader.read(configFileURL
 					.getPath());
 
 		} catch (Exception e) {

@@ -23,7 +23,7 @@ public class RecommenderResource {
 	ServletContext context;
 
 	private EpnoiCore epnoiCore = null;
-
+	// -----------------------------------------------------------------
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
 	public RecommenderService setRecommendationAsXML() {

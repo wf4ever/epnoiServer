@@ -13,7 +13,9 @@ public class RecommenderService{
 	
 
 	String recommendationsSet="/recommender/recommendations/recommendationSet/user/{userId}{?max}";
-	String filteredRecommendationsSet="/recommender/recommendations/recommendationSet/user/{userId}/{itemType}{?max}";
+	String filteredRecommendationsSet="/recommender/recommendations/recommendationSet/user/{userID}/{type}{?max}";
+	String recommendationContext="/recommender/contexts/recommendationContext{?user,resource, keyword}";
+	String contextualizedRecommendationsSet="/recommender/contexts/contextualizedRecommendationsSet{?user,type, max}";
 
 	
 	
@@ -32,6 +34,23 @@ public class RecommenderService{
 
 	public void setFilteredRecommendationsSet(String filteredRecommendationSet) {
 		this.filteredRecommendationsSet = filteredRecommendationSet;
+	}
+
+	public String getRecommendationContext() {
+		return recommendationContext;
+	}
+
+	public void setRecommendationContext(String recommendationContext) {
+		this.recommendationContext = recommendationContext;
+	}
+
+	public String getContextualizedRecommendationsSet() {
+		return contextualizedRecommendationsSet;
+	}
+
+	public void setContextualizedRecommendationsSet(
+			String contextualizedRecommendationsSet) {
+		this.contextualizedRecommendationsSet = contextualizedRecommendationsSet;
 	}
 
 }
