@@ -31,92 +31,12 @@ import epnoi.server.services.responses.RecommendationsSet;
 
 @Path("/recommender/recommendations/recommendationsSet/")
 @Produces(MediaType.APPLICATION_XML)
-public class RecommendationsSetResource {
+public class RecommendationsSetResource extends EpnoiService {
 	private final static Logger logger = Logger
 			.getLogger(RecommendationsSetResource.class.getName());
-	private String EPNOI_CORE_ATTRIBUTE = "EPNOI_CORE";
-	
-	private ParametersModel parametersModel;
 
 	@Context
 	ServletContext context;
-
-	private EpnoiCore epnoiCore = null;
-
-	private void _initEpnoiCore() {
-		this.epnoiCore = (EpnoiCore) this.context
-				.getAttribute(EPNOI_CORE_ATTRIBUTE);
-		if (this.epnoiCore == null) {
-			System.out.println("Loading the model!");
-			long time = System.currentTimeMillis();
-			this.epnoiCore = new EpnoiCore();
-			parametersModel = this._readParameters();
-			this.epnoiCore.init(parametersModel);
-			this.context.setAttribute(EPNOI_CORE_ATTRIBUTE, epnoiCore);
-			long afterTime = System.currentTimeMillis();
-			System.out.println("It took " + (Long) (afterTime - time) / 1000.0
-					+ "to load the model");
-		}
-
-	}
-
-	public ParametersModel _readParameters() {
-		ParametersModel parametersModel = null;
-
-		try {
-			URL configFileURL = EpnoiServer.class.getResource("epnoi.xml");
-			parametersModel = ParametersModelReader.read(configFileURL
-					.getPath());
-
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		// Before we start the server we translate those properties that are
-		// related to the
-		// path where the epnoi server is deployed in order to have complete
-		// routes
-
-		
-		
-		logger.info("The modelPath is made absolute: intial value: "
-				+ parametersModel.getModelPath());
-
-		System.out
-				.println(">"
-						+ EpnoiServer.class.getResource(parametersModel
-								.getModelPath()));
-
-		String completeModelPath = EpnoiServer.class.getResource(
-				parametersModel.getModelPath()).getPath();
-
-		parametersModel.setModelPath(completeModelPath);
-		logger.info("The modelPath is made absolute: absolute value: "
-				+ parametersModel.getModelPath());
-
-		logger.info("The index Path is made absolute: intial value: "
-				+ parametersModel.getIndexPath());
-
-		String indexPath = EpnoiServer.class.getResource(
-				parametersModel.getIndexPath()).getPath();
-
-		parametersModel.setIndexPath(indexPath);
-		logger.info("The indexPath is made absolute: absolute value: "
-				+ parametersModel.getIndexPath());
-		logger.info("The graph Path is made absolute: intial value: "
-				+ parametersModel.getGraphPath());
-
-		String graphPath = EpnoiServer.class.getResource(
-				parametersModel.getGraphPath()).getPath();
-
-		parametersModel.setGraphPath(graphPath);
-		logger.info("The graph path is made absolute: absolute value: "
-				+ parametersModel.getGraphPath());
-
-		return parametersModel;
-	}
-
 
 	@Path("/user/{id}")
 	@GET
@@ -132,7 +52,9 @@ public class RecommendationsSetResource {
 		ArrayList<Recommendation> recommendationsForUser = null;
 
 		if (id != 0) {
+			System.out.println("-->" + this.epnoiCore);
 
+			System.out.println("-->" + this.epnoiCore.getRecommendationSpace());
 			recommendationsForUser = this.epnoiCore.getRecommendationSpace()
 					.getRecommendationsForUserID(id);
 		}
@@ -254,7 +176,7 @@ public class RecommendationsSetResource {
 						recommendation.getItemURI());
 				recommendationResponse.setTitle(workflow.getTitle());
 				recommendationResponse.setResource(workflow.getResource());
-				
+
 				recommendationResponse.setExplanation(recommendation
 						.getExplanation().getExplanation());
 
@@ -264,7 +186,7 @@ public class RecommendationsSetResource {
 						recommendation.getItemURI());
 				recommendationResponse.setTitle(file.getTitle());
 				recommendationResponse.setResource(file.getResource());
-				
+
 				recommendationResponse.setExplanation(recommendation
 						.getExplanation().getExplanation());
 			} else if (recommendationProvenance.getParameterByName(
@@ -273,7 +195,7 @@ public class RecommendationsSetResource {
 						recommendation.getItemURI());
 				recommendationResponse.setTitle(pack.getTitle());
 				recommendationResponse.setResource(pack.getResource());
-				
+
 				recommendationResponse.setExplanation(recommendation
 						.getExplanation().getExplanation());
 			} else if (recommendationProvenance.getParameterByName(
@@ -285,13 +207,24 @@ public class RecommendationsSetResource {
 
 				recommendationResponse.setExplanation(recommendation
 						.getExplanation().getExplanation());
+
+			} else if (recommendationProvenance.getParameterByName(
+					Provenance.ITEM_TYPE).equals(Provenance.ITEM_TYPE_EXTERNAL_RESOURCE)) {
+				//recommendationResponse.setTitle(user.getName());
+				//recommendationResponse.setResource(user.getResource());
+
+				recommendationResponse.setExplanation(recommendation
+						.getExplanation().getExplanation());
+				
+				recommendationResponse.setResource(recommendation.getItemURI());
 			}
 
 			recommendationResponse.setStrength(recommendation.getStrength());
 			recommendationResponse.setUsedTechnique(recommendation
 					.getProvenance().getParameterByName(Provenance.TECHNIQUE));
-			
-			recommendationResponse.setItemType(recommendation.getProvenance().getParameterByName(Provenance.ITEM_TYPE));
+
+			recommendationResponse.setItemType(recommendation.getProvenance()
+					.getParameterByName(Provenance.ITEM_TYPE));
 			recommendationResponses.add(recommendationResponse);
 
 		}

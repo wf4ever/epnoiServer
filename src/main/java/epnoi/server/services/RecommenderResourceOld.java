@@ -95,7 +95,7 @@ public class RecommenderResourceOld {
 
 		parametersModel.setModelPath(completeModelPath);
 		logger.info("The modelPath is made absolute: absolute value: "+parametersModel.getModelPath());
-
+/*
 		logger.info("The index Path is made absolute: intial value: "+parametersModel.getIndexPath());
 
 		String indexPath = EpnoiServer.class.getResource(
@@ -112,7 +112,7 @@ public class RecommenderResourceOld {
 		
 		parametersModel.setGraphPath(graphPath);
 		logger.info("The graph path is made absolute: absolute value: "+parametersModel.getModelPath());
-
+*/
 		
 
 		return parametersModel;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <parametersModel>
-<!-- 
+
 	<collaborativeFilteringRecommender>
 		<type>WORKFLOWS_COLLABORATIVE_FILTER</type>
 		<URI>recommenderA</URI>
@@ -9,14 +9,22 @@
 		<numberOfRecommendations>5</numberOfRecommendations>
 		<similarity>SIMILARITY_EUCLIDEAN</similarity>
 	</collaborativeFilteringRecommender>
--->
+
 	<keywordBasedRecommender>
-		<type>KEYWORD_CONTENT_BASED</type>
+		<type>WORKFLOWS_KEYWORD_CONTENT_BASED</type>
+		<indexPath>indexMyExperiment</indexPath>
 		<URI>recommenderC</URI>
 		<numberOfQueryHits>10</numberOfQueryHits>
 	</keywordBasedRecommender>
+<!-- 	
+		<keywordBasedRecommender>
+		<type>EXTERNAL_RESOURCES_KEYWORD_CONTENT_BASED</type>
+		<indexPath>OAIPMH/index</indexPath>
+		<URI>recommenderF</URI>
+		<numberOfQueryHits>10</numberOfQueryHits>
+	</keywordBasedRecommender>
 	
-<!-- 
+
 	<collaborativeFilteringRecommender>
 		<type>FILES_COLLABORATIVE_FILTER</type>
 		<URI>recommenderB</URI>
@@ -26,29 +34,30 @@
 		<similarity>SIMILARITY_EUCLIDEAN</similarity>
 	</collaborativeFilteringRecommender>
  
-
+ 
 	<socialRecommender>
 		<type>USER_SOCIAL_NETWORK</type>
 		<URI>recommenderD</URI>
-
+<graphPath>myexperimentgraphdb</graphPath>
 		<numberOfRecommendations>5</numberOfRecommendations>
 	</socialRecommender>
 -->
+<!--
 <groupBasedRecommender>
         <type>WORKFLOWS_GROUP_BASED</type>
         <URI>recommenderE</URI>
-        <indexPath>/wf4ever/indexMyExperiment</indexPath>
+        <indexPath>indexMyExperiment</indexPath>
         <numberOfQueryHits>10</numberOfQueryHits>
     </groupBasedRecommender>
+	-->
 	<inferenceEngine>
 		<numberOfInteractions>50</numberOfInteractions>
 		<minimumActivation>0.1</minimumActivation>
 	</inferenceEngine>
 	
 <!-- global recommenders properties -->
-	<graphPath>myexperimentgraphdb</graphPath>
-	<indexPath>indexMyExperiment</indexPath>
-	<modelPath>/lastImportedModel.xml</modelPath>
+	
+	<modelPath>lastImportedModel.xml</modelPath>
 	
 	<!-- server properties -->
 	<path></path>

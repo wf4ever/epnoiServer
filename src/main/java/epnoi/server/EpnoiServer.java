@@ -73,45 +73,10 @@ public class EpnoiServer {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		
+parametersModel.resolveToAbsolutePaths(EpnoiServer.class);
 
-		// Before we start the server we translate those properties that are
-		// related to the
-		// path where the epnoi server is deployed in order to have complete
-		// routes
-
-		logger.info("The modelPath is made absolute: intial value: "
-				+ parametersModel.getModelPath());
-
-		System.out
-				.println(">"
-						+ EpnoiServer.class.getResource(parametersModel
-								.getModelPath()));
-
-		String completeModelPath = EpnoiServer.class.getResource(
-				parametersModel.getModelPath()).getPath();
-
-		parametersModel.setModelPath(completeModelPath);
-		logger.info("The modelPath is made absolute: absolute value: "
-				+ parametersModel.getModelPath());
-
-		logger.info("The index Path is made absolute: intial value: "
-				+ parametersModel.getIndexPath());
-
-		String indexPath = EpnoiServer.class.getResource(
-				parametersModel.getIndexPath()).getPath();
-
-		parametersModel.setIndexPath(indexPath);
-		logger.info("The indexPath is made absolute: absolute value: "
-				+ parametersModel.getIndexPath());
-		logger.info("The graph Path is made absolute: intial value: "
-				+ parametersModel.getGraphPath());
-
-		String graphPath = EpnoiServer.class.getResource(
-				parametersModel.getGraphPath()).getPath();
-
-		parametersModel.setGraphPath(graphPath);
-		logger.info("The graph path is made absolute: absolute value: "
-				+ parametersModel.getGraphPath());
 
 		return parametersModel;
 	}

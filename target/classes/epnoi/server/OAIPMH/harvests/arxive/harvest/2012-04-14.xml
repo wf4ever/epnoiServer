@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<harvest>
+
+<timeStamp>Wed Oct 24 20:23:21 CEST 2012</timeStamp>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+<responseDate>2012-10-24T18:24:17Z</responseDate>
+<request from="2012-04-14" metadataPrefix="oai_dc" until="2012-04-15" verb="ListRecords">http://export.arxiv.org/oai2</request>
+<ListRecords>
+<record>
+<header>
+ <identifier>oai:arXiv.org:1108.1148</identifier>
+ <datestamp>2012-04-15</datestamp>
+ <setSpec>physics:physics</setSpec>
+</header>
+<metadata>
+ <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+ <dc:title>Universes with and without a center</dc:title>
+ <dc:creator>Tomozawa, Yukio</dc:creator>
+ <dc:subject>Physics - General Physics</dc:subject>
+ <dc:description>  Two types of universe, with and without a center, are discussed; and their
+implications for the observed cmb (cosmic microwave background radiation)
+dipole are described. Theorems useful for understanding the cause for a cmb
+dipole are presented.
+</dc:description>
+ <dc:description>Comment: 7 pages, no figure</dc:description>
+ <dc:date>2011-08-04</dc:date>
+ <dc:type>text</dc:type>
+ <dc:identifier>http://arxiv.org/abs/1108.1148</dc:identifier>
+ </oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+ <identifier>oai:arXiv.org:hep-ph/0503261</identifier>
+ <datestamp>2012-04-15</datestamp>
+ <setSpec>physics:hep-ph</setSpec>
+</header>
+<metadata>
+ <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+ <dc:title>The Discovery Potential of a Super B Factory</dc:title>
+ <dc:creator>Hewett, JoAnne. L.</dc:creator>
+ <dc:creator>Hitlin, David G.</dc:creator>
+ <dc:creator>Abe, T.</dc:creator>
+ <dc:creator>Agashe, K.</dc:creator>
+ <dc:creator>Albert, J.</dc:creator>
+ <dc:creator>Ali, A.</dc:creator>
+ <dc:creator>Atwood, D.</dc:creator>
+ <dc:creator>Bauer, C.</dc:creator>
+ <dc:creator>Bernard, C.</dc:creator>
+ <dc:creator>Bigi, I.</dc:creator>
+ <dc:creator>Buras, A. J.</dc:creator>
+ <dc:creator>Burdman, G.</dc:creator>
+ <dc:creator>Ciuchini, M.</dc:creator>
+ <dc:creator>Convery, M.</dc:creator>
+ <dc:creator>Dasu, S.</dc:creator>
+ <dc:creator>Datta, A.</dc:creator>
+ <dc:creator>Datta, M.</dc:creator>
+ <dc:creator>Dedes, A.</dc:creator>
+ <dc:creator>del Re, D.</dc:creator>
+ <dc:creator>Demir, D. A.</dc:creator>
+ <dc:creator>Di Lodovico, F.</dc:creator>
+ <dc:creator>Dujmic, D.</dc:creator>
+ <dc:creator>Eigen, G.</dc:creator>
+ <dc:creator>Egede, U.</dc:creator>
+ <dc:creator>Falk, A.</dc:creator>
+ <dc:creator>Feldmann, Th.</dc:creator>
+ <dc:creator>Gopalakrishna, S.</dc:creator>
+ <dc:creator>Goto, T.</dc:creator>
+ <dc:creator>Graziani, K.</dc:creator>
+ <dc:creator>Grinstein, B.</dc:creator>
+ <dc:creator>Gritsan, A.</dc:creator>
+ <dc:creator>Gronau, M.</dc:creator>
+ <dc:creator>Grossman, Y.</dc:creator>
+ <dc:creator>Hashimoto, S.</dc:creator>
+ <dc:creator>Hazumi, M.</dc:creator>
+ <dc:creator>Hewett, J.</dc:creator>
+ <dc:creator>Hiller, G.</dc:creator>
+ <dc:creator>Hisano, J.</dc:creator>
+ <dc:creator>Hitlin, D. G.</dc:creator>
+ <dc:creator>Hulsbergen, W.</dc:creator>
+ <dc:creator>Hurth, T.</dc:creator>
+ <dc:creator>Igonkina, O.</dc:creator>
+ <dc:creator>Isidori, G.</dc:creator>
+ <dc:creator>Jessop, C.</dc:creator>
+ <dc:creator>Kagan, A. L.</dc:creator>
+ <dc:creator>Ko, P.</dc:creator>
+ <dc:creator>Kolda, C.</dc:creator>
+ <dc:creator>Koppenburg, P.</dc:creator>
+ <dc:creator>Koptchev, V.</dc:creator>
+ <dc:creator>Krueger, F.</dc:creator>
+ <dc:creator>Langenegger, U.</dc:creator>
+ <dc:creator>Libby, J.</dc:creator>
+ <dc:creator>Ligeti, Z.</dc:creator>
+ <dc:creator>Lillie, B.</dc:creator>
+ <dc:creator>London, D.</dc:creator>
+ <dc:creator>Luke, M.</dc:creator>
+ <dc:creator>Lunghi, E.</dc:creator>
+ <dc:creator>Mackenzie, P.</dc:creator>
+ <dc:creator>Manohar, A.</dc:creator>
+ <dc:creator>Matchev, K.</dc:creator>
+ <dc:creator>Moore, T.</dc:creator>
+ <dc:creator>Neubert, M.</dc:creator>
+ <dc:creator>Oh, S.</dc:creator>
+ <dc:creator>Okada, Y.</dc:creator>
+ <dc:creator>Parkhomenko, Y.</dc:creator>
+ <dc:creator>Petrov, A. A.</dc:creator>
+ <dc:creator>Pirjol, D.</dc:creator>
+ <dc:creator>Poschenrieder, A.</dc:creator>
+ <dc:creator>Purohit, M.</dc:creator>
+ <dc:creator>Quinn, H.</dc:creator>
+ <dc:creator>Rizzo, T. G.</dc:creator>
+ <dc:creator>Robertson, S. H.</dc:creator>
+ <dc:creator>Roodman, A.</dc:creator>
+ <dc:creator>Rosner, J.</dc:creator>
+ <dc:creator>Rothstein, I.</dc:creator>
+ <dc:creator>Rubin, A.</dc:creator>
+ <dc:creator>Ryd, A.</dc:creator>
+ <dc:creator>Shelkov, V. G.</dc:creator>
+ <dc:creator>Shimizu, Y.</dc:creator>
+ <dc:creator>Shindou, T.</dc:creator>
+ <dc:creator>Silvestrini, L.</dc:creator>
+ <dc:creator>Sinha, N.</dc:creator>
+ <dc:creator>Sinha, R.</dc:creator>
+ <dc:creator>Soffer, A.</dc:creator>
+ <dc:creator>Soni, A.</dc:creator>
+ <dc:creator>Spranger, M.</dc:creator>
+ <dc:creator>Staengle, H.</dc:creator>
+ <dc:creator>Stewart, I.</dc:creator>
+ <dc:creator>Tanaka, M.</dc:creator>
+ <dc:creator>Vempati, S. K.</dc:creator>
+ <dc:creator>Vives, O.</dc:creator>
+ <dc:creator>Voloshin, M.</dc:creator>
+ <dc:creator>Weiler, A.</dc:creator>
+ <dc:creator>Wells, J. D.</dc:creator>
+ <dc:creator>Wilkinson, G.</dc:creator>
+ <dc:creator>Williams, D. C.</dc:creator>
+ <dc:creator>Willocq, S.</dc:creator>
+ <dc:creator>Wyler, D.</dc:creator>
+ <dc:creator>Zupan, J.</dc:creator>
+ <dc:subject>High Energy Physics - Phenomenology</dc:subject>
+ <dc:description>  The Proceedings of the 2003 SLAC Workshops on flavor physics with a high
+luminosity asymmetric e+e- collider. The sensitivity of flavor physics to
+physics beyond the Standard Model is addressed in detail, in the context of the
+improvement of experimental measurements and theoretical calculations.
+</dc:description>
+ <dc:description>Comment: 476 pages. Printed copies may be obtained by request to
+  kwebb@slac.stanford.edu . arXiv admin note: v2 appears to be identical to v1</dc:description>
+ <dc:date>2005-03-25</dc:date>
+ <dc:date>2005-04-15</dc:date>
+ <dc:type>text</dc:type>
+ <dc:identifier>http://arxiv.org/abs/hep-ph/0503261</dc:identifier>
+ </oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+ <identifier>oai:arXiv.org:math-ph/9911003</identifier>
+ <datestamp>2012-04-15</datestamp>
+ <setSpec>math</setSpec>
+ <setSpec>physics:hep-th</setSpec>
+ <setSpec>physics:math-ph</setSpec>
+</header>
+<metadata>
+ <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+ <dc:title>Soliton equations in N-dimensions as exact reductions of Self-Dual
+  Yang-Mills equation IV. The mM-LXII and Bogomolny equations</dc:title>
+ <dc:creator>Myrzakul, Kur.</dc:creator>
+ <dc:creator>Myrzakulov, R.</dc:creator>
+ <dc:subject>Mathematical Physics</dc:subject>
+ <dc:subject>High Energy Physics - Theory</dc:subject>
+ <dc:subject>Mathematics - Differential Geometry</dc:subject>
+ <dc:subject>Mathematics - History and Overview</dc:subject>
+ <dc:description>  Some aspects of the multidimensional soliton geometry are considered. The
+relation between soliton equations in 2+1 dimensions and the Self-Dual
+Yang-Mills and Bogomolny equations are discussed.
+</dc:description>
+ <dc:description>Comment: 22 pages, latex, no figures</dc:description>
+ <dc:date>1999-11-03</dc:date>
+ <dc:type>text</dc:type>
+ <dc:identifier>http://arxiv.org/abs/math-ph/9911003</dc:identifier>
+ </oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+ <identifier>oai:arXiv.org:math/9909155</identifier>
+ <datestamp>2012-04-15</datestamp>
+ <setSpec>math</setSpec>
+</header>
+<metadata>
+ <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+ <dc:title>The L-equivalent counterpart of the M-III equation</dc:title>
+ <dc:creator>Myrzakulov, R.</dc:creator>
+ <dc:creator>Danlybaeva, A. K.</dc:creator>
+ <dc:subject>Mathematics - Differential Geometry</dc:subject>
+ <dc:description>  The connection between differential geometry of curves and the
+(2+1)-dimensional integrable spin system - the M-III equation is established.
+Using the presented geometrical formalism the L-equivalent counterpart of the
+M-III equation is found.
+</dc:description>
+ <dc:description>Comment: Latex, 15 pages, no figures</dc:description>
+ <dc:date>1999-09-25</dc:date>
+ <dc:type>text</dc:type>
+ <dc:identifier>http://arxiv.org/abs/math/9909155</dc:identifier>
+ </oai_dc:dc>
+</metadata>
+</record>
+<record>
+<header>
+ <identifier>oai:arXiv.org:math/9910125</identifier>
+ <datestamp>2012-04-15</datestamp>
+ <setSpec>math</setSpec>
+</header>
+<metadata>
+ <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+ <dc:title>Soliton equations in N-dimensions as exact reductions of Self-dual
+  Yang-Mills equation III. Soliton geometry in 2+1 and 3+1 dimensions</dc:title>
+ <dc:creator>Myrzakul, Kur. R.</dc:creator>
+ <dc:creator>Myrzakulov, R.</dc:creator>
+ <dc:subject>Mathematics - Differential Geometry</dc:subject>
+ <dc:description>  Some aspects of the relation between differential geometry of curves and
+surfaces and multidimensional soliton equations is discussed. The connection
+between multidimensional soliton equations and Self-dual Yang-Mills equation is
+studied.
+</dc:description>
+ <dc:description>Comment: LaTex, 19 pages, no figures</dc:description>
+ <dc:date>1999-10-23</dc:date>
+ <dc:type>text</dc:type>
+ <dc:identifier>http://arxiv.org/abs/math/9910125</dc:identifier>
+ </oai_dc:dc>
+</metadata>
+</record>
+</ListRecords>
+</OAI-PMH>
+</harvest>

@@ -9,6 +9,7 @@ import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 import com.sun.jersey.api.representation.Form;
 
+import epnoi.model.ActionsContext;
 import epnoi.model.RecommendationContext;
 import epnoi.server.services.responses.RecommendationsSet;
 
@@ -22,10 +23,10 @@ public class EpnoiClient {
 		System.out.println("------->" +candidateKeyword.matches("contents:\\s*"));
 		System.exit(0);
 		*/
-		String testURI = "http://localhost:8081/epnoiServerWAR/rest/";
+		//String testURI = "http://localhost:8081/epnoiServerWAR/rest/";
 
 		
-		
+		String testURI = "http://localhost:8015/";
 		
 		ClientConfig config = new DefaultClientConfig();
 		Client client = Client.create(config);
@@ -34,6 +35,9 @@ public class EpnoiClient {
 		ClientResponse response = null;
 		// Create one todo
 		System.out.println("Context creation------------------------------");
+		
+		System.out.println("Recommendations context creation------------------------------");
+		
 		String userURI = "http://www.myexperiment.org/user.xml?id=2";
 		// String userURI = "http://www.myexperiment.org/user.xml?id=43";
 		System.out.println(service
@@ -48,6 +52,21 @@ public class EpnoiClient {
 				.queryParam("resource",
 						"http://www.myexperiment.org/workflow.xml?id=1583")
 				.accept(MediaType.APPLICATION_XML).put(ClientResponse.class));
+		System.out.println("Actions context creation------------------------------");
+		//" action> " + actionType + " item> " + item+ " timestamp> " + timestamp
+		System.out.println(service
+				.path("recommender")
+				.path("contexts")
+				.path("actionsContext")
+				.queryParam("user", userURI)
+				.queryParam("actionType",
+						"viewed")
+				.queryParam("item",
+						"http://www.myexperiment.org/workflow.xml?id=16")
+				.queryParam("timestamp",
+						"whenever")
+				.accept(MediaType.APPLICATION_XML).post(ClientResponse.class));
+		
 		System.out.println("Context retrieval------------------------------");
 		System.out.println(service.path("recommender").path("contexts")
 				.path("recommendationContext").queryParam("user", userURI)
@@ -55,12 +74,22 @@ public class EpnoiClient {
 				.get(RecommendationContext.class));
 
 		System.out
-				.println("Recommendation retrieval------------------------------");
+				.println("Context retrieval------------------------------");
+		System.out
+		.println("Context recommendation retrieval------------------------------");
 		System.out.println(service.path("recommender").path("recommendations")
 				.path("contextualizedRecommendationsSet")
 				.queryParam("user", userURI).accept(MediaType.APPLICATION_XML)
 				.get(RecommendationsSet.class).getRecommendation());
+	
+		
+		System.out
+		.println("Actions recomendations retrieval------------------------------");
 
+		System.out.println(service.path("recommender").path("contexts")
+				.path("actionsContext")
+				.queryParam("user", userURI).accept(MediaType.APPLICATION_XML)
+				.get(ActionsContext.class));
 	}
 
 }

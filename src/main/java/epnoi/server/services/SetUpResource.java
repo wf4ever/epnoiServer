@@ -24,15 +24,15 @@ import epnoi.model.parameterization.ParametersModelReader;
 import epnoi.server.EpnoiServer;
 
 @Path("/recommender/setup")
-public class SetUpResource {
+public class SetUpResource extends EpnoiService{
 	private final static Logger logger = Logger.getLogger(SetUpResource.class
 			.getName());
-	private String EPNOI_CORE_ATTRIBUTE = "EPNOI_CORE";
+	
 	@Context
 	ServletContext context;
 
-	private EpnoiCore epnoiCore = null;
-	private ParametersModel parametersModel;
+	
+
 	// -----------------------------------------------------------------
 	@GET
 	@Produces("text/xml")
@@ -42,6 +42,7 @@ public class SetUpResource {
 				.getAllRecommendations().size();
 		return "I have" + numberOfRecommendations + " recommendations \n";
 	}
+
 	// -----------------------------------------------------------------
 	@Path("/wakeup")
 	@GET
@@ -52,14 +53,14 @@ public class SetUpResource {
 		long time = System.currentTimeMillis();
 
 		try {
-			this.parametersModel = this._readParameters();
+			parametersModel = this._readParameters();
 			this._initEpnoiCore();
 		} catch (Exception e) {
 			return "Something went wrong in the recommender initialization :( /n"
 					+ e.getMessage();
 		}
 		long afterTime = System.currentTimeMillis();
-		String serverPath = "http://" + parametersModel.getHostname() + ":"
+		String serverPath = "http://" + super.parametersModel.getHostname() + ":"
 				+ parametersModel.getPort() + "/" + parametersModel.getPath();
 		response += "The Recommender Service has been initialized!  \n";
 		response += "It is available at: " + serverPath + " \n";
@@ -229,73 +230,6 @@ public class SetUpResource {
 
 	}
 
-	private void _initEpnoiCore() {
-		String response = "";
-		this.epnoiCore = (EpnoiCore) this.context
-				.getAttribute(EPNOI_CORE_ATTRIBUTE);
-		if (this.epnoiCore == null) {
 
-			this.epnoiCore = new EpnoiCore();
-			ParametersModel parametersModel = this._readParameters();
-			this.epnoiCore.init(parametersModel);
-			this.context.setAttribute(EPNOI_CORE_ATTRIBUTE, epnoiCore);
-
-		}
-	}
-
-	public static ParametersModel _readParameters() {
-		ParametersModel parametersModel = null;
-
-		try {
-			URL configFileURL = EpnoiServer.class.getResource("epnoi.xml");
-			parametersModel = ParametersModelReader.read(configFileURL
-					.getPath());
-
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		// Before we start the server we translate those properties that are
-		// related to the
-		// path where the epnoi server is deployed in order to have complete
-		// routes
-
-		logger.info("The modelPath is made absolute: intial value: "
-				+ parametersModel.getModelPath());
-
-		System.out
-				.println(">"
-						+ EpnoiServer.class.getResource(parametersModel
-								.getModelPath()));
-
-		String completeModelPath = EpnoiServer.class.getResource(
-				parametersModel.getModelPath()).getPath();
-
-		parametersModel.setModelPath(completeModelPath);
-		logger.info("The modelPath is made absolute: absolute value: "
-				+ parametersModel.getModelPath());
-
-		logger.info("The index Path is made absolute: intial value: "
-				+ parametersModel.getIndexPath());
-
-		String indexPath = EpnoiServer.class.getResource(
-				parametersModel.getIndexPath()).getPath();
-
-		parametersModel.setIndexPath(indexPath);
-		logger.info("The indexPath is made absolute: absolute value: "
-				+ parametersModel.getIndexPath());
-		logger.info("The graph Path is made absolute: intial value: "
-				+ parametersModel.getGraphPath());
-
-		String graphPath = EpnoiServer.class.getResource(
-				parametersModel.getGraphPath()).getPath();
-
-		parametersModel.setGraphPath(graphPath);
-		logger.info("The graph path is made absolute: absolute value: "
-				+ parametersModel.getModelPath());
-
-		return parametersModel;
-	}
 
 }

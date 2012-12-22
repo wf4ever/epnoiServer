@@ -31,56 +31,6 @@ public class ContextualizedRecommendationsSetResource extends EpnoiService {
 	}
 
 	// -----------------------------------------------------------------
-	/*
-	 * @Path("contextualizedRecommendationsSet")
-	 * 
-	 * @GET
-	 * 
-	 * @Produces(MediaType.APPLICATION_XML) public RecommendationsSet
-	 * getRecommendationAsXML(
-	 * 
-	 * @DefaultValue("none") @QueryParam("user") String userURI,
-	 * 
-	 * @DefaultValue("0") @QueryParam("max") Integer maxNumberOfRecommedations)
-	 * {
-	 * 
-	 * logger.info(
-	 * "Handling the request of a contextualized recommendation whith the following parameters: user> "
-	 * + userURI + " max> " + maxNumberOfRecommedations); _initEpnoiCore();
-	 * 
-	 * this.epnoiCore.updateContextualizedRecommendationSpace(userURI);
-	 * 
-	 * ArrayList<Recommendation> recommendationsForUser=null;
-	 * 
-	 * if (!userURI.equals("none")) {
-	 * 
-	 * recommendationsForUser =
-	 * this.epnoiCore.getContextualizedRecommendationSpace()
-	 * .getRecommendationsForUserURI(userURI); }
-	 * 
-	 * if (recommendationsForUser != null) { if (maxNumberOfRecommedations != 0)
-	 * { ArrayList<Recommendation> filteredRecommendationsForUser = new
-	 * ArrayList<Recommendation>(); Iterator<Recommendation> recommendationsIt =
-	 * _orderByStrength( recommendationsForUser).iterator(); int i = 0; while
-	 * (recommendationsIt.hasNext() && i < maxNumberOfRecommedations) {
-	 * 
-	 * filteredRecommendationsForUser.add(i, recommendationsIt.next()); i++; }
-	 * RecommendationsSet recommendationSet = new RecommendationsSet();
-	 * recommendationSet
-	 * .setRecommendation(_convertToResponse(filteredRecommendationsForUser));
-	 * return recommendationSet;
-	 * 
-	 * }
-	 * 
-	 * RecommendationsSet recommendationSet = new RecommendationsSet();
-	 * recommendationSet
-	 * .setRecommendation(_convertToResponse(_orderByStrength(recommendationsForUser
-	 * ))); return recommendationSet; }
-	 * 
-	 * return new RecommendationsSet(); }
-	 */
-
-	// -----------------------------------------------------------------
 
 	@Path("contextualizedRecommendationsSet")
 	@GET
