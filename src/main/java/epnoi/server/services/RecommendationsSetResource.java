@@ -241,5 +241,12 @@ public class RecommendationsSetResource extends EpnoiService {
 		return orderedRecommendations;
 
 	}
+	
+	@Path("/user/{id}")
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public RecommendationsSet getRecommendationAsJSON(){
+		return new RecommendationsSet();
+	}
 
 }

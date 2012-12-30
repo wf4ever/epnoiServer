@@ -13,25 +13,20 @@ import epnoi.logging.EpnoiLogger;
 import epnoi.model.parameterization.ParametersModel;
 import epnoi.model.parameterization.ParametersModelReader;
 
-/*
- import com.sun.grizzly.http.SelectorThread;
- import com.sun.jersey.api.container.grizzly.GrizzlyWebContainerFactory;
- */
-
 public class EpnoiServer {
 	private static final Logger logger = Logger.getLogger(EpnoiServer.class
 			.getName());
 
 	public static void main(String[] args) throws IOException {
-		//The first step is to set up the logger
+		// The first step is to set up the logger
 		EpnoiLogger.setup();
-		
+
 		// final String baseUri = "http://localhost:9998/";
 		final Map<String, String> initParams = new HashMap<String, String>();
 
 		initParams.put("com.sun.jersey.config.property.packages",
-				"epnoi.server.services");
-
+				"epnoi.server.services, epnoi.server.services.json");
+		initParams.put("com.sun.jersey.api.json.POJOMappingFeature", "true");
 		ParametersModel parametersModel = null;
 
 		parametersModel = EpnoiServer._readParameters();
@@ -73,10 +68,8 @@ public class EpnoiServer {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-parametersModel.resolveToAbsolutePaths(EpnoiServer.class);
 
+		parametersModel.resolveToAbsolutePaths(EpnoiServer.class);
 
 		return parametersModel;
 	}
