@@ -1,6 +1,5 @@
 package epnoi.server.services;
 
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -15,19 +14,15 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 
-import epnoi.core.EpnoiCore;
 import epnoi.model.File;
 import epnoi.model.Pack;
 import epnoi.model.Provenance;
 import epnoi.model.Recommendation;
 import epnoi.model.User;
 import epnoi.model.Workflow;
-import epnoi.model.parameterization.ParametersModel;
-import epnoi.model.parameterization.ParametersModelReader;
-import epnoi.server.EpnoiServer;
 import epnoi.server.services.responses.RecommendationsSet;
+import epnoi.server.services.responses.Track;
 
 @Path("/recommender/recommendations/recommendationsSet/")
 @Produces(MediaType.APPLICATION_XML)
@@ -209,13 +204,14 @@ public class RecommendationsSetResource extends EpnoiService {
 						.getExplanation().getExplanation());
 
 			} else if (recommendationProvenance.getParameterByName(
-					Provenance.ITEM_TYPE).equals(Provenance.ITEM_TYPE_EXTERNAL_RESOURCE)) {
-				//recommendationResponse.setTitle(user.getName());
-				//recommendationResponse.setResource(user.getResource());
+					Provenance.ITEM_TYPE).equals(
+					Provenance.ITEM_TYPE_EXTERNAL_RESOURCE)) {
+				// recommendationResponse.setTitle(user.getName());
+				// recommendationResponse.setResource(user.getResource());
 
 				recommendationResponse.setExplanation(recommendation
 						.getExplanation().getExplanation());
-				
+
 				recommendationResponse.setResource(recommendation.getItemURI());
 			}
 
@@ -241,12 +237,57 @@ public class RecommendationsSetResource extends EpnoiService {
 		return orderedRecommendations;
 
 	}
-	
+
 	@Path("/user/{id}")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public RecommendationsSet getRecommendationAsJSON(){
+	public RecommendationsSet getRecommendationAsJSON(
+
+			@DefaultValue("0") @PathParam("id") Long id,
+			@DefaultValue("0") @QueryParam("max") Integer maxNumberOfRecommedations) {
+		System.out.println("JSON............id> " + id + " max> "
+				+ maxNumberOfRecommedations);
+		logger.info("Handling the request of JSON recommendations whith the following parameters: id> "
+				+ id + " max> " + maxNumberOfRecommedations);
+		_initEpnoiCore();
+		ArrayList<Recommendation> recommendationsForUser = null;
+
+		if (id != 0) {
+			System.out.println("-->" + this.epnoiCore);
+
+			System.out.println("-->" + this.epnoiCore.getRecommendationSpace());
+			recommendationsForUser = this.epnoiCore.getRecommendationSpace()
+					.getRecommendationsForUserID(id);
+		}
+
+		if (recommendationsForUser != null) {
+			if (maxNumberOfRecommedations != 0) {
+				ArrayList<Recommendation> filteredRecommendationsForUser = new ArrayList<Recommendation>();
+				Iterator<Recommendation> recommendationsIt = _orderByStrength(
+						recommendationsForUser).iterator();
+				int i = 0;
+				while (recommendationsIt.hasNext()
+						&& i < maxNumberOfRecommedations) {
+
+					filteredRecommendationsForUser.add(i,
+							recommendationsIt.next());
+					i++;
+				}
+				RecommendationsSet recommendationSet = new RecommendationsSet();
+				recommendationSet
+						.setRecommendation(_convertToResponse(filteredRecommendationsForUser));
+				return recommendationSet;
+
+			}
+
+			RecommendationsSet recommendationSet = new RecommendationsSet();
+			recommendationSet
+					.setRecommendation(_convertToResponse(_orderByStrength(recommendationsForUser)));
+			return recommendationSet;
+		}
+
 		return new RecommendationsSet();
+
 	}
 
 }

@@ -1,192 +1,55 @@
-30-dic-2012 18:22:39 epnoi.server.EpnoiServer main
+08-ene-2013 18:18:33 epnoi.server.EpnoiServer main
 INFO: Starting grizzly...
-30-dic-2012 18:22:40 epnoi.server.EpnoiServer main
+08-ene-2013 18:18:33 com.sun.grizzly.Controller logVersion
+INFO: GRIZZLY0001: Starting Grizzly Framework 1.9.55 - 8/01/13 18:18
+08-ene-2013 18:18:33 epnoi.server.EpnoiServer main
 INFO: Epnoi server started with WADL available at http://localhost:8015/application.wadl
-30-dic-2012 18:23:13 com.sun.jersey.api.core.PackagesResourceConfig init
+09-ene-2013 0:34:34 com.sun.jersey.api.core.PackagesResourceConfig init
 INFO: Scanning for root resource and provider classes in the packages:
   epnoi.server.services
   epnoi.server.services.json
-30-dic-2012 18:23:13 com.sun.jersey.api.core.ScanningResourceConfig logClasses
+09-ene-2013 0:34:34 com.sun.jersey.api.core.ScanningResourceConfig logClasses
 INFO: Root resource classes found:
-  class epnoi.server.services.RecommenderResourceOld
-  class epnoi.server.services.SetUpResource
-  class epnoi.server.services.ContextualizedRecommendationsSetResource
+  class epnoi.server.services.RecommenderResource
   class epnoi.server.services.RecommendationsSetResource
   class epnoi.server.services.ActionsContextResource
+  class epnoi.server.services.RecommenderResourceOld
+  class epnoi.server.services.SetUpResource
   class epnoi.server.services.RecommendationContextResource
-  class epnoi.server.services.RecommenderResource
-30-dic-2012 18:23:13 com.sun.jersey.api.core.ScanningResourceConfig init
+  class epnoi.server.services.ContextualizedRecommendationsSetResource
+09-ene-2013 0:34:34 com.sun.jersey.api.core.ScanningResourceConfig init
 INFO: No provider classes found.
-30-dic-2012 18:23:13 com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
-INFO: Initiating Jersey application, version 'Jersey: 1.9.1 09/14/2011 02:05 PM'
-30-dic-2012 18:23:14 com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
-INFO: Couldn't find JAX-B element for class java.util.ArrayList
-30-dic-2012 18:23:14 com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
-INFO: Couldn't find JAX-B element for class java.util.ArrayList
-30-dic-2012 18:23:14 com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
-INFO: Couldn't find JAX-B element for class java.lang.String
-30-dic-2012 18:23:14 com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
-INFO: Couldn't find JAX-B element for class java.lang.String
-30-dic-2012 18:23:14 com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator$8 resolve
-GRAVE: null
-java.lang.IllegalAccessException: Class com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator$8 can not access a member of class javax.ws.rs.core.Response with modifiers "protected"
-	at sun.reflect.Reflection.ensureMemberAccess(Reflection.java:65)
-	at java.lang.Class.newInstance0(Class.java:349)
-	at java.lang.Class.newInstance(Class.java:308)
-	at com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator$8.resolve(WadlGeneratorJAXBGrammarGenerator.java:467)
-	at com.sun.jersey.server.wadl.WadlGenerator$ExternalGrammarDefinition.resolve(WadlGenerator.java:181)
-	at com.sun.jersey.server.wadl.ApplicationDescription.resolve(ApplicationDescription.java:81)
-	at com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator.attachTypes(WadlGeneratorJAXBGrammarGenerator.java:518)
-	at com.sun.jersey.server.wadl.WadlBuilder.generate(WadlBuilder.java:124)
-	at com.sun.jersey.server.impl.wadl.WadlApplicationContextImpl.getApplication(WadlApplicationContextImpl.java:104)
-	at com.sun.jersey.server.impl.wadl.WadlResource.getWadl(WadlResource.java:89)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
-	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
-	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$ResponseOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:205)
-	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
-	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
-	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
-	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
-	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
-	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1469)
-	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1400)
-	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1349)
-	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1339)
-	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416)
-	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
-	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
-	at com.sun.grizzly.http.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:188)
-	at com.sun.grizzly.http.servlet.FilterChainImpl.invokeFilterChain(FilterChainImpl.java:137)
-	at com.sun.grizzly.http.servlet.ServletAdapter.service(ServletAdapter.java:278)
-	at com.sun.grizzly.tcp.http11.GrizzlyAdapter.service(GrizzlyAdapter.java:165)
-	at com.sun.grizzly.http.ProcessorTask.invokeAdapter(ProcessorTask.java:659)
-	at com.sun.grizzly.http.ProcessorTask.doProcess(ProcessorTask.java:577)
-	at com.sun.grizzly.http.ProcessorTask.process(ProcessorTask.java:829)
-	at com.sun.grizzly.http.DefaultProtocolFilter.execute(DefaultProtocolFilter.java:162)
-	at com.sun.grizzly.DefaultProtocolChain.executeProtocolFilter(DefaultProtocolChain.java:136)
-	at com.sun.grizzly.DefaultProtocolChain.execute(DefaultProtocolChain.java:103)
-	at com.sun.grizzly.DefaultProtocolChain.execute(DefaultProtocolChain.java:89)
-	at com.sun.grizzly.http.HttpProtocolChain.execute(HttpProtocolChain.java:76)
-	at com.sun.grizzly.ProtocolChainContextTask.doCall(ProtocolChainContextTask.java:67)
-	at com.sun.grizzly.SelectionKeyContextTask.call(SelectionKeyContextTask.java:57)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
-	at java.lang.Thread.run(Thread.java:680)
-30-dic-2012 18:23:14 com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
-INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
-30-dic-2012 18:23:14 com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
-INFO: Couldn't find JAX-B element for class java.lang.String
-30-dic-2012 18:23:14 com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
-INFO: Couldn't find JAX-B element for class java.lang.String
-30-dic-2012 18:23:14 com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator$8 resolve
-GRAVE: null
-java.lang.IllegalAccessException: Class com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator$8 can not access a member of class javax.ws.rs.core.Response with modifiers "protected"
-	at sun.reflect.Reflection.ensureMemberAccess(Reflection.java:65)
-	at java.lang.Class.newInstance0(Class.java:349)
-	at java.lang.Class.newInstance(Class.java:308)
-	at com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator$8.resolve(WadlGeneratorJAXBGrammarGenerator.java:467)
-	at com.sun.jersey.server.wadl.WadlGenerator$ExternalGrammarDefinition.resolve(WadlGenerator.java:181)
-	at com.sun.jersey.server.wadl.ApplicationDescription.resolve(ApplicationDescription.java:81)
-	at com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator.attachTypes(WadlGeneratorJAXBGrammarGenerator.java:518)
-	at com.sun.jersey.server.wadl.WadlBuilder.generate(WadlBuilder.java:124)
-	at com.sun.jersey.server.impl.wadl.WadlApplicationContextImpl.getApplication(WadlApplicationContextImpl.java:104)
-	at com.sun.jersey.server.impl.wadl.WadlResource.getWadl(WadlResource.java:89)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
-	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
-	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$ResponseOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:205)
-	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
-	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
-	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
-	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
-	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
-	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1469)
-	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1400)
-	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1349)
-	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1339)
-	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416)
-	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
-	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
-	at com.sun.grizzly.http.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:188)
-	at com.sun.grizzly.http.servlet.FilterChainImpl.invokeFilterChain(FilterChainImpl.java:137)
-	at com.sun.grizzly.http.servlet.ServletAdapter.service(ServletAdapter.java:278)
-	at com.sun.grizzly.tcp.http11.GrizzlyAdapter.service(GrizzlyAdapter.java:165)
-	at com.sun.grizzly.http.ProcessorTask.invokeAdapter(ProcessorTask.java:659)
-	at com.sun.grizzly.http.ProcessorTask.doProcess(ProcessorTask.java:577)
-	at com.sun.grizzly.http.ProcessorTask.process(ProcessorTask.java:829)
-	at com.sun.grizzly.http.DefaultProtocolFilter.execute(DefaultProtocolFilter.java:162)
-	at com.sun.grizzly.DefaultProtocolChain.executeProtocolFilter(DefaultProtocolChain.java:136)
-	at com.sun.grizzly.DefaultProtocolChain.execute(DefaultProtocolChain.java:103)
-	at com.sun.grizzly.DefaultProtocolChain.execute(DefaultProtocolChain.java:89)
-	at com.sun.grizzly.http.HttpProtocolChain.execute(HttpProtocolChain.java:76)
-	at com.sun.grizzly.ProtocolChainContextTask.doCall(ProtocolChainContextTask.java:67)
-	at com.sun.grizzly.SelectionKeyContextTask.call(SelectionKeyContextTask.java:57)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
-	at java.lang.Thread.run(Thread.java:680)
-30-dic-2012 18:23:14 com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
-INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
-30-dic-2012 18:23:14 com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator$8 resolve
-GRAVE: null
-java.lang.IllegalAccessException: Class com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator$8 can not access a member of class javax.ws.rs.core.Response with modifiers "protected"
-	at sun.reflect.Reflection.ensureMemberAccess(Reflection.java:65)
-	at java.lang.Class.newInstance0(Class.java:349)
-	at java.lang.Class.newInstance(Class.java:308)
-	at com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator$8.resolve(WadlGeneratorJAXBGrammarGenerator.java:467)
-	at com.sun.jersey.server.wadl.WadlGenerator$ExternalGrammarDefinition.resolve(WadlGenerator.java:181)
-	at com.sun.jersey.server.wadl.ApplicationDescription.resolve(ApplicationDescription.java:81)
-	at com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator.attachTypes(WadlGeneratorJAXBGrammarGenerator.java:518)
-	at com.sun.jersey.server.wadl.WadlBuilder.generate(WadlBuilder.java:124)
-	at com.sun.jersey.server.impl.wadl.WadlApplicationContextImpl.getApplication(WadlApplicationContextImpl.java:104)
-	at com.sun.jersey.server.impl.wadl.WadlResource.getWadl(WadlResource.java:89)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
-	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
-	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$ResponseOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:205)
-	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
-	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
-	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
-	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
-	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
-	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1469)
-	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1400)
-	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1349)
-	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1339)
-	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416)
-	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
-	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
-	at com.sun.grizzly.http.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:188)
-	at com.sun.grizzly.http.servlet.FilterChainImpl.invokeFilterChain(FilterChainImpl.java:137)
-	at com.sun.grizzly.http.servlet.ServletAdapter.service(ServletAdapter.java:278)
-	at com.sun.grizzly.tcp.http11.GrizzlyAdapter.service(GrizzlyAdapter.java:165)
-	at com.sun.grizzly.http.ProcessorTask.invokeAdapter(ProcessorTask.java:659)
-	at com.sun.grizzly.http.ProcessorTask.doProcess(ProcessorTask.java:577)
-	at com.sun.grizzly.http.ProcessorTask.process(ProcessorTask.java:829)
-	at com.sun.grizzly.http.DefaultProtocolFilter.execute(DefaultProtocolFilter.java:162)
-	at com.sun.grizzly.DefaultProtocolChain.executeProtocolFilter(DefaultProtocolChain.java:136)
-	at com.sun.grizzly.DefaultProtocolChain.execute(DefaultProtocolChain.java:103)
-	at com.sun.grizzly.DefaultProtocolChain.execute(DefaultProtocolChain.java:89)
-	at com.sun.grizzly.http.HttpProtocolChain.execute(HttpProtocolChain.java:76)
-	at com.sun.grizzly.ProtocolChainContextTask.doCall(ProtocolChainContextTask.java:67)
-	at com.sun.grizzly.SelectionKeyContextTask.call(SelectionKeyContextTask.java:57)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
-	at java.lang.Thread.run(Thread.java:680)
-30-dic-2012 18:23:14 com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
-INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+09-ene-2013 0:34:34 com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version 'Jersey: 1.16 11/28/2012 02:09 PM'
+09-ene-2013 0:34:36 epnoi.server.services.RecommendationsSetResource getRecommendationAsXML
+INFO: Handling the request of recommendations whith the following parameters: id> 2 max> 0
+09-ene-2013 0:34:36 epnoi.core.EpnoiCore init
+INFO: Initializing the epnoi core
+09-ene-2013 0:34:37 epnoi.core.EpnoiCore _initRecommenders
+INFO: Initializing recommenders
+09-ene-2013 0:34:37 epnoi.core.EpnoiCore _initRecommenders
+INFO: Initializing collaborative filtering recommenders
+09-ene-2013 0:34:37 epnoi.core.EpnoiCore _initRecommenders
+INFO: Initializing keyword content based recommenders
+09-ene-2013 0:34:38 epnoi.core.EpnoiCore _initRecommenders
+INFO: Initializing group based recommenders
+09-ene-2013 0:34:38 epnoi.core.EpnoiCore _initRecommenders
+INFO: Initializing social recommenders
+09-ene-2013 0:34:38 epnoi.core.EpnoiCore _initRecommenders
+INFO: The following recommenders have been initialized: 
+	> (recommenderFKeyword Recommender[#QueryHits:10, IndexPath/wf4ever/epnoiServer/target/classes/epnoi/server/OAIPMH/index]
+	> (recommenderACollaborative Filter Recommender[ItemType:WORKFLOWS_COLLABORATIVE_FILTER, #Recommendations:5, NeighbourhoodType: NEIGHBOURHOOD_TYPE_NEAREST, NeighbourhoodSize: 5 , NeighbourhoodThreshold:null]
+	> (recommenderCKeyword Recommender[#QueryHits:10, IndexPath/wf4ever/epnoiServer/target/classes/epnoi/server/indexMyExperiment]
+
+09-ene-2013 0:34:38 epnoi.core.EpnoiCore _initRecommendationSpace
+INFO: Initializing the Recommendations Space
+09-ene-2013 0:34:45 epnoi.core.EpnoiCore _initRecommendationSpace
+INFO: The recommendation space has been initialized with 4600 recommendations
+09-ene-2013 0:34:45 epnoi.core.EpnoiCore _initInferenceEngine
+INFO: Initializing the Inference Engine
+09-ene-2013 0:34:45 epnoi.core.EpnoiCore _initInferredRecommendationSpace
+INFO: Initializing the inferred recommendations space
+09-ene-2013 0:34:45 epnoi.core.EpnoiCore _initInferredRecommendationSpace
+INFO: The inferred recommend space has been initialized with 219
+09-ene-2013 12:48:25 epnoi.server.EpnoiServer main
+INFO: The Recommender Service has been shut down propperly

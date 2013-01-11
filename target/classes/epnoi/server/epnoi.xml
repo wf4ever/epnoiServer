@@ -16,14 +16,14 @@
 		<URI>recommenderC</URI>
 		<numberOfQueryHits>10</numberOfQueryHits>
 	</keywordBasedRecommender>
-<!-- 	
+ 	
 		<keywordBasedRecommender>
 		<type>EXTERNAL_RESOURCES_KEYWORD_CONTENT_BASED</type>
 		<indexPath>OAIPMH/index</indexPath>
 		<URI>recommenderF</URI>
 		<numberOfQueryHits>10</numberOfQueryHits>
 	</keywordBasedRecommender>
-	
+<!-- 	
 
 	<collaborativeFilteringRecommender>
 		<type>FILES_COLLABORATIVE_FILTER</type>

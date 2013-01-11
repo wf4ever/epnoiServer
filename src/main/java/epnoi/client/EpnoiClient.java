@@ -7,7 +7,7 @@ import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
-import com.sun.jersey.api.representation.Form;
+import com.sun.jersey.api.json.JSONConfiguration;
 
 import epnoi.model.ActionsContext;
 import epnoi.model.RecommendationContext;
@@ -29,16 +29,37 @@ public class EpnoiClient {
 		String testURI = "http://localhost:8015/";
 		
 		ClientConfig config = new DefaultClientConfig();
+		config.getFeatures().put(JSONConfiguration.FEATURE_POJO_MAPPING, Boolean.TRUE);
 		Client client = Client.create(config);
+		
 		WebResource service = client.resource(testURI);
 
 		ClientResponse response = null;
 		// Create one todo
+		String userURI = "http://www.myexperiment.org/user.xml?id=1";
+		
+		System.out.println("Getting recommendations");
+	//	System.out.println("-> "+service.path("recommender/recommendations/recommendationsSet/user/2")
+	//	.accept(MediaType.APPLICATION_JSON).get(Track.class));
+	
+		
+		 
+		WebResource webResource = client
+		   .resource("http://localhost:8015/recommender/recommendations/recommendationsSet/user/1");
+		response = webResource.accept("application/json")
+                .get(ClientResponse.class);
+		
+		System.out.println(response.getEntity(String.class));
+		
+		
+	//	System.out.println("-> "+recommendationsSet.getRecommendation());
+		
+		System.exit(0);
 		System.out.println("Context creation------------------------------");
 		
 		System.out.println("Recommendations context creation------------------------------");
 		
-		String userURI = "http://www.myexperiment.org/user.xml?id=2";
+		
 		// String userURI = "http://www.myexperiment.org/user.xml?id=43";
 		System.out.println(service
 				.path("recommender")
