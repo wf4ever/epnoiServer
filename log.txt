@@ -1,3 +1,4 @@
+Proof!
 08-ene-2013 18:18:33 epnoi.server.EpnoiServer main
 INFO: Starting grizzly...
 08-ene-2013 18:18:33 com.sun.grizzly.Controller logVersion
