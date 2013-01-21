@@ -54,7 +54,7 @@ public class EpnoiClient {
 		
 	//	System.out.println("-> "+recommendationsSet.getRecommendation());
 		
-		System.exit(0);
+		//System.exit(0);
 		System.out.println("Context creation------------------------------");
 		
 		System.out.println("Recommendations context creation------------------------------");

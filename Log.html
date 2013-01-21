@@ -1,65 +1,88 @@
 <HTML>
 <HEAD>
-Tue Jan 08 18:18:33 CET 2013
+Mon Jan 21 18:40:14 CET 2013
 </HEAD>
 <BODY>
 <PRE>
 <table border>
   <tr><th>Level</th><th>Timestamp</th><th>Log Message</th><th>Source class</th><th>Source method</th></tr>
-<tr><td>INFO</td><td>ene 08,2013 18:18</td><td>Starting grizzly...</td><td>epnoi.server.EpnoiServer</td><td>main</td>
+<tr><td>INFO</td><td>ene 21,2013 18:40</td><td>Starting grizzly...</td><td>epnoi.server.EpnoiServer</td><td>main</td>
 </tr>
-<tr><td>INFO</td><td>ene 08,2013 18:18</td><td>GRIZZLY0001: Starting Grizzly Framework 1.9.55 - 8/01/13 18:18</td><td>com.sun.grizzly.Controller</td><td>logVersion</td>
+<tr><td>INFO</td><td>ene 21,2013 18:40</td><td>GRIZZLY0001: Starting Grizzly Framework 1.9.55 - 21/01/13 18:40</td><td>com.sun.grizzly.Controller</td><td>logVersion</td>
 </tr>
-<tr><td>INFO</td><td>ene 08,2013 18:18</td><td>Epnoi server started with WADL available at http://localhost:8015/application.wadl</td><td>epnoi.server.EpnoiServer</td><td>main</td>
+<tr><td>INFO</td><td>ene 21,2013 18:40</td><td>Epnoi server started with WADL available at http://localhost:8015/application.wadl</td><td>epnoi.server.EpnoiServer</td><td>main</td>
 </tr>
-<tr><td>INFO</td><td>ene 09,2013 00:34</td><td>Scanning for root resource and provider classes in the packages:
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Scanning for root resource and provider classes in the packages:
   epnoi.server.services
   epnoi.server.services.json</td><td>com.sun.jersey.api.core.PackagesResourceConfig</td><td>init</td>
 </tr>
-<tr><td>INFO</td><td>ene 09,2013 00:34</td><td>Root resource classes found:
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Root resource classes found:
+  class epnoi.server.services.AggregationRecommendationsSetResource
+  class epnoi.server.services.ActionsContextResource
+  class epnoi.server.services.SetUpResource
+  class epnoi.server.services.RecommenderResourceOld
+  class epnoi.server.services.ContextualizedRecommendationsSetResource
   class epnoi.server.services.RecommenderResource
   class epnoi.server.services.RecommendationsSetResource
-  class epnoi.server.services.ActionsContextResource
-  class epnoi.server.services.RecommenderResourceOld
-  class epnoi.server.services.SetUpResource
-  class epnoi.server.services.RecommendationContextResource
-  class epnoi.server.services.ContextualizedRecommendationsSetResource</td><td>com.sun.jersey.api.core.ScanningResourceConfig</td><td>logClasses</td>
+  class epnoi.server.services.RecommendationContextResource</td><td>com.sun.jersey.api.core.ScanningResourceConfig</td><td>logClasses</td>
 </tr>
-<tr><td>INFO</td><td>ene 09,2013 00:34</td><td>No provider classes found.</td><td>com.sun.jersey.api.core.ScanningResourceConfig</td><td>init</td>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>No provider classes found.</td><td>com.sun.jersey.api.core.ScanningResourceConfig</td><td>init</td>
 </tr>
-<tr><td>INFO</td><td>ene 09,2013 00:34</td><td>Initiating Jersey application, version 'Jersey: 1.16 11/28/2012 02:09 PM'</td><td>com.sun.jersey.server.impl.application.WebApplicationImpl</td><td>_initiate</td>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Initiating Jersey application, version 'Jersey: 1.16 11/28/2012 02:09 PM'</td><td>com.sun.jersey.server.impl.application.WebApplicationImpl</td><td>_initiate</td>
 </tr>
-<tr><td>INFO</td><td>ene 09,2013 00:34</td><td>Handling the request of recommendations whith the following parameters: id> 2 max> 0</td><td>epnoi.server.services.RecommendationsSetResource</td><td>getRecommendationAsXML</td>
+<tr><td><b>WARNING</b></td><td>ene 21,2013 18:47</td><td>The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public epnoi.server.services.responses.RecommendationsSet epnoi.server.services.AggregationRecommendationsSetResource.getRecommendationAsXMLFiltered(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer), with URI template, "", is treated as a resource method</td><td>com.sun.jersey.spi.inject.Errors</td><td>processErrorMessages</td>
 </tr>
-<tr><td>INFO</td><td>ene 09,2013 00:34</td><td>Initializing the epnoi core</td><td>epnoi.core.EpnoiCore</td><td>init</td>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Handling the request of JSON recommendations whith the following parameters: id> 1 max> 0</td><td>epnoi.server.services.RecommendationsSetResource</td><td>getRecommendationAsJSON</td>
 </tr>
-<tr><td>INFO</td><td>ene 09,2013 00:34</td><td>Initializing recommenders</td><td>epnoi.core.EpnoiCore</td><td>_initRecommenders</td>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Initializing the epnoi core</td><td>epnoi.core.EpnoiCore</td><td>init</td>
 </tr>
-<tr><td>INFO</td><td>ene 09,2013 00:34</td><td>Initializing collaborative filtering recommenders</td><td>epnoi.core.EpnoiCore</td><td>_initRecommenders</td>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Initializing recommenders</td><td>epnoi.core.EpnoiCore</td><td>_initRecommenders</td>
 </tr>
-<tr><td>INFO</td><td>ene 09,2013 00:34</td><td>Initializing keyword content based recommenders</td><td>epnoi.core.EpnoiCore</td><td>_initRecommenders</td>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Initializing collaborative filtering recommenders</td><td>epnoi.core.EpnoiCore</td><td>_initRecommenders</td>
 </tr>
-<tr><td>INFO</td><td>ene 09,2013 00:34</td><td>Initializing group based recommenders</td><td>epnoi.core.EpnoiCore</td><td>_initRecommenders</td>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Initializing keyword content based recommenders</td><td>epnoi.core.EpnoiCore</td><td>_initRecommenders</td>
 </tr>
-<tr><td>INFO</td><td>ene 09,2013 00:34</td><td>Initializing social recommenders</td><td>epnoi.core.EpnoiCore</td><td>_initRecommenders</td>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Initializing group based recommenders</td><td>epnoi.core.EpnoiCore</td><td>_initRecommenders</td>
 </tr>
-<tr><td>INFO</td><td>ene 09,2013 00:34</td><td>The following recommenders have been initialized: 
-	> (recommenderFKeyword Recommender[#QueryHits:10, IndexPath/wf4ever/epnoiServer/target/classes/epnoi/server/OAIPMH/index]
-	> (recommenderACollaborative Filter Recommender[ItemType:WORKFLOWS_COLLABORATIVE_FILTER, #Recommendations:5, NeighbourhoodType: NEIGHBOURHOOD_TYPE_NEAREST, NeighbourhoodSize: 5 , NeighbourhoodThreshold:null]
-	> (recommenderCKeyword Recommender[#QueryHits:10, IndexPath/wf4ever/epnoiServer/target/classes/epnoi/server/indexMyExperiment]
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Index directory for the recommender/wf4ever/epnoiServer/target/classes/epnoi/server/indexMyExperiment</td><td>epnoi.recommeders.WorkflowsGroupBasedRecommender</td><td>init</td>
+</tr>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Initializing aggregation based recommenders</td><td>epnoi.core.EpnoiCore</td><td>_initRecommenders</td>
+</tr>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Index directory for the recommender/wf4ever/data/indexMyExperiment</td><td>epnoi.recommeders.AggregationBasedRecommender</td><td>init</td>
+</tr>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Initializing social recommenders</td><td>epnoi.core.EpnoiCore</td><td>_initRecommenders</td>
+</tr>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>The following recommenders have been initialized: 
+	> (recommenderEGroup Based Recommender[#QueryHits:10, IndexPath/wf4ever/epnoiServer/target/classes/epnoi/server/indexMyExperiment]
+	> (recommenderAggregationBasedAAggregation Based Recommender[#QueryHits:10, IndexPath/wf4ever/data/indexMyExperiment]
 </td><td>epnoi.core.EpnoiCore</td><td>_initRecommenders</td>
 </tr>
-<tr><td>INFO</td><td>ene 09,2013 00:34</td><td>Initializing the Recommendations Space</td><td>epnoi.core.EpnoiCore</td><td>_initRecommendationSpace</td>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Initializing the Recommendations Space</td><td>epnoi.core.EpnoiCore</td><td>_initRecommendationSpace</td>
 </tr>
-<tr><td>INFO</td><td>ene 09,2013 00:34</td><td>The recommendation space has been initialized with 4600 recommendations</td><td>epnoi.core.EpnoiCore</td><td>_initRecommendationSpace</td>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>The recommendation space has been initialized with 0 recommendations</td><td>epnoi.core.EpnoiCore</td><td>_initRecommendationSpace</td>
 </tr>
-<tr><td>INFO</td><td>ene 09,2013 00:34</td><td>Initializing the Inference Engine</td><td>epnoi.core.EpnoiCore</td><td>_initInferenceEngine</td>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Initializing the Inference Engine</td><td>epnoi.core.EpnoiCore</td><td>_initInferenceEngine</td>
 </tr>
-<tr><td>INFO</td><td>ene 09,2013 00:34</td><td>Initializing the inferred recommendations space</td><td>epnoi.core.EpnoiCore</td><td>_initInferredRecommendationSpace</td>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Initializing the inferred recommendations space</td><td>epnoi.core.EpnoiCore</td><td>_initInferredRecommendationSpace</td>
 </tr>
-<tr><td>INFO</td><td>ene 09,2013 00:34</td><td>The inferred recommend space has been initialized with 219</td><td>epnoi.core.EpnoiCore</td><td>_initInferredRecommendationSpace</td>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>The inferred recommend space has been initialized with 0</td><td>epnoi.core.EpnoiCore</td><td>_initInferredRecommendationSpace</td>
 </tr>
-<tr><td>INFO</td><td>ene 09,2013 12:48</td><td>The Recommender Service has been shut down propperly</td><td>epnoi.server.EpnoiServer</td><td>main</td>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Handling the request PUT with the following parameters: user> http://www.myexperiment.org/user.xml?id=1 keyword> [] resource> [http://www.myexperiment.org/user.xml?id=43, http://www.myexperiment.org/workflow.xml?id=16, http://www.myexperiment.org/workflow.xml?id=1583]</td><td>epnoi.server.services.RecommendationContextResource</td><td>createRecommendationContext</td>
+</tr>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Handling the request POST with the following parameters: user> http://www.myexperiment.org/user.xml?id=1 action> viewed item> http://www.myexperiment.org/workflow.xml?id=16 timestamp> whenever</td><td>epnoi.server.services.RecommendationContextResource</td><td>updateRecommendationContext</td>
+</tr>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Handling the request of recommendations with the following parameters: user> http://www.myexperiment.org/user.xml?id=1</td><td>epnoi.server.services.RecommendationContextResource</td><td>getRecommendationContext</td>
+</tr>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Handling the filtered request of contextualized recommendations whith the following parameters: user> http://www.myexperiment.org/user.xml?id=1 max> 0 type> any</td><td>epnoi.server.services.ContextualizedRecommendationsSetResource</td><td>getRecommendationAsXMLFiltered</td>
+</tr>
+<tr><td><b>SEVERE</b></td><td>ene 21,2013 18:47</td><td>The RuntimeException could not be mapped to a response, re-throwing to the HTTP container</td><td>com.sun.jersey.spi.container.ContainerResponse</td><td>mapMappableContainerException</td>
+</tr>
+<tr><td><b>SEVERE</b></td><td>ene 21,2013 18:47</td><td>service exception:</td><td>com.sun.grizzly.http.servlet.ServletAdapter</td><td>doService</td>
+</tr>
+<tr><td>INFO</td><td>ene 21,2013 18:47</td><td>Handling the request of  recommendations for an aggregation whith the following parameters: user> http://www.myexperiment.org/user.xml?id=1 pack>http://www.myexperiment.org/pack.xml?id=122 max> 0 type> any</td><td>epnoi.server.services.AggregationRecommendationsSetResource</td><td>getRecommendationAsXMLFiltered</td>
+</tr>
+<tr><td>INFO</td><td>ene 21,2013 19:31</td><td>The Recommender Service has been shut down propperly</td><td>epnoi.server.EpnoiServer</td><td>main</td>
 </tr>
 </table>
   </PRE></BODY>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <parametersModel>
-
+<!-- 
 	<collaborativeFilteringRecommender>
 		<type>WORKFLOWS_COLLABORATIVE_FILTER</type>
 		<URI>recommenderA</URI>
@@ -12,18 +12,18 @@
 
 	<keywordBasedRecommender>
 		<type>WORKFLOWS_KEYWORD_CONTENT_BASED</type>
-		<indexPath>indexMyExperiment</indexPath>
+		<indexPath>/wf4ever/data/indexMyExperiment</indexPath>
 		<URI>recommenderC</URI>
 		<numberOfQueryHits>10</numberOfQueryHits>
 	</keywordBasedRecommender>
  	
 		<keywordBasedRecommender>
 		<type>EXTERNAL_RESOURCES_KEYWORD_CONTENT_BASED</type>
-		<indexPath>OAIPMH/index</indexPath>
+		<indexPath>/wf4ever/data/OAIPMH/index</indexPath>
 		<URI>recommenderF</URI>
 		<numberOfQueryHits>10</numberOfQueryHits>
 	</keywordBasedRecommender>
-<!-- 	
+	
 
 	<collaborativeFilteringRecommender>
 		<type>FILES_COLLABORATIVE_FILTER</type>
@@ -38,18 +38,25 @@
 	<socialRecommender>
 		<type>USER_SOCIAL_NETWORK</type>
 		<URI>recommenderD</URI>
-<graphPath>myexperimentgraphdb</graphPath>
+<graphPath>/wf4ever/data/myexperimentgraphdb</graphPath>
 		<numberOfRecommendations>5</numberOfRecommendations>
 	</socialRecommender>
 -->
-<!--
+
 <groupBasedRecommender>
         <type>WORKFLOWS_GROUP_BASED</type>
         <URI>recommenderE</URI>
-        <indexPath>indexMyExperiment</indexPath>
+        <indexPath>/wf4ever/data/indexMyExperiment</indexPath>
         <numberOfQueryHits>10</numberOfQueryHits>
     </groupBasedRecommender>
-	-->
+    
+    <aggregationBasedRecommender>
+        <type>AGGREGATION_BASED</type>
+        <URI>recommenderAggregationBasedA</URI>
+        <indexPath>/wf4ever/data/indexMyExperiment</indexPath>
+        <numberOfQueryHits>10</numberOfQueryHits>
+    </aggregationBasedRecommender>
+	
 	<inferenceEngine>
 		<numberOfInteractions>50</numberOfInteractions>
 		<minimumActivation>0.1</minimumActivation>
@@ -57,7 +64,7 @@
 	
 <!-- global recommenders properties -->
 	
-	<modelPath>lastImportedModel.xml</modelPath>
+	<modelPath>/wf4ever/data/lastImportedModel.xml</modelPath>
 	
 	<!-- server properties -->
 	<path></path>
