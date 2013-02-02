@@ -23,8 +23,8 @@
 		<URI>recommenderF</URI>
 		<numberOfQueryHits>10</numberOfQueryHits>
 	</keywordBasedRecommender>
-	
-
+ -->	
+<!--  
 	<collaborativeFilteringRecommender>
 		<type>FILES_COLLABORATIVE_FILTER</type>
 		<URI>recommenderB</URI>
@@ -34,6 +34,7 @@
 		<similarity>SIMILARITY_EUCLIDEAN</similarity>
 	</collaborativeFilteringRecommender>
  
+--> 
  
 	<socialRecommender>
 		<type>USER_SOCIAL_NETWORK</type>
@@ -41,15 +42,15 @@
 <graphPath>/wf4ever/data/myexperimentgraphdb</graphPath>
 		<numberOfRecommendations>5</numberOfRecommendations>
 	</socialRecommender>
--->
 
+<!-- 
 <groupBasedRecommender>
         <type>WORKFLOWS_GROUP_BASED</type>
         <URI>recommenderE</URI>
         <indexPath>/wf4ever/data/indexMyExperiment</indexPath>
         <numberOfQueryHits>10</numberOfQueryHits>
     </groupBasedRecommender>
-    
+  -->  
     <aggregationBasedRecommender>
         <type>AGGREGATION_BASED</type>
         <URI>recommenderAggregationBasedA</URI>

@@ -29,6 +29,7 @@ public abstract class EpnoiService {
 	// ----------------------------------------------------------------------------------------
 
 	protected void _initEpnoiCore() {
+		
 		this.epnoiCore = (EpnoiCore) this.context
 				.getAttribute(EPNOI_CORE_ATTRIBUTE);
 		if (this.epnoiCore == null) {

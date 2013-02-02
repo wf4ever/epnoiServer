@@ -61,8 +61,7 @@ public class AggregationRecommendationsSetResource extends EpnoiService {
 		if (!userURI.equals("none") && !packURI.equals("none")) {
 			RecommendationSpace recommendationSpace = this.epnoiCore
 					.getOnTheFlyRecommendationSpace(parameters);
-			System.out.println("RecommendationSpace    >>"
-					+ recommendationSpace.getAllRecommendations());
+			
 			ArrayList<Recommendation> recommendationsForUser = null;
 
 			if (type.equals("workflows")) {
@@ -88,8 +87,7 @@ public class AggregationRecommendationsSetResource extends EpnoiService {
 						.getRecommendationsForUserURI(packURI);
 			}
 
-			System.out.println("Recommendations for user >"
-					+ recommendationsForUser);
+		
 			if (recommendationsForUser != null) {
 				if (maxNumberOfRecommedations != 0) {
 					ArrayList<Recommendation> filteredRecommendationsForUser = new ArrayList<Recommendation>();
