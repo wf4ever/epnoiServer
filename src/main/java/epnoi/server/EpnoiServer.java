@@ -19,7 +19,7 @@ public class EpnoiServer {
 
 	public static void main(String[] args) throws IOException {
 		// The first step is to set up the logger
-		EpnoiLogger.setup();
+		EpnoiLogger.setup("");
 
 		// final String baseUri = "http://localhost:9998/";
 		final Map<String, String> initParams = new HashMap<String, String>();
